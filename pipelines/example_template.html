@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worked example: selling a five-room HDB flat, Bukit Panjang</title>
+<meta name="description" content="A worked example of the buy-timing framework on public HDB data: a five-room flat on floors 10 to 15 at BLK 184 Jelebu Rd. Research, not advice.">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>{{CSS}}
+.crumb{font-size:12px;margin-bottom:10px}.crumb a{color:var(--gold)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px}.kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.kpi .v{font-family:var(--mono);font-size:22px;font-weight:600;margin-top:2px}.kpi .s{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body><div class="page">
+<div class="crumb"><a href="./">&larr; Buy-Timing Dashboard</a></div>
+<div class="header">
+  <div><div class="h-sub">Worked example &middot; public HDB data &middot; CPE framework</div>
+  <div class="h-title">Timing the sale of a <em>five-room flat</em>, BLK 184 Jelebu Rd</div>
+  <div class="h-meta">Bukit Panjang &middot; floors 10 to 15 &middot; lease from {{LEASE}} (about {{REMAIN}} years left) &middot; {{ASOF}}</div></div>
+</div>
+<div class="banner"><b>NO TIMING SIGNAL.</b> Across the framework&rsquo;s tests, nothing has reliably told HDB resale prices when to rise or fall since 2017. The useful reading is the block&rsquo;s position against its peers, the state of the market, and the base rates below.
+<div class="sub2">A worked example of the method on public data. It is research, not financial advice, and it does not model anyone&rsquo;s loan, CPF, costs or plans.</div></div>
+
+<div class="kpis">
+<div class="kpi"><div class="l">Block premium over the town</div><div class="v">{{PREM}}</div><div class="s">same type, size, floor and age; five-room only {{PREM5}}</div></div>
+<div class="kpi"><div class="l">Model range, {{MONTH}}</div><div class="v">{{LO}} to {{HI}}</div><div class="s">centre {{MU}}: a 112 sqm five-room, about the 12th floor</div></div>
+<div class="kpi"><div class="l">HDB Resale Price Index</div><div class="v">{{RPI}}</div><div class="s">{{RPIFROM}} from its {{RPIPEAKQ}} peak, {{RPIYOY}} on the year</div></div>
+<div class="kpi"><div class="l">Bukit Panjang index</div><div class="v">{{BPVSPEAK}}</div><div class="s">from its {{BPPEAKM}} peak; {{BPYOY}} on the year</div></div>
+</div>
+
+<h2>The block and its peers</h2>
+<p class="tag">{{N_ALL5}} five-room resales in the block since March 2012, of which {{N_SEG}} on floors 10 to 15. Peers are other Bukit Panjang blocks with a similar lease start (2000 to 2006): {{N_PEERS}} five-room sales on floors 10 to 15 in {{N_PEERBLK}} blocks.</p>
+<div class="block"><div id="e1" class="chart"></div></div>
+<div class="grid" style="margin-top:14px">
+<section class="block"><h3>Five-room sales on floors 10 to 15</h3><div class="tablewrap"><table><thead><tr><th>Month</th><th>Floors</th><th>Area (sqm)</th><th>Price</th><th>Per sq ft</th></tr></thead><tbody>{{ROWS_BLK}}</tbody></table></div></section>
+<section class="block"><h3>Latest five-room sales, any floor</h3><div class="tablewrap"><table><thead><tr><th>Month</th><th>Floors</th><th>Area (sqm)</th><th>Price</th><th>Per sq ft</th></tr></thead><tbody>{{ROWS_RECENT}}</tbody></table></div></section>
+</div>
+<div class="block" style="margin-top:14px"><ul>
+<li><b>The block sells above its peers.</b> Median price in the segment against the peers&rsquo; median, by year: {{PREM_PEERS}}. Few sales per year in the block, so these are rough.</li>
+<li><b>A model range, not a valuation.</b> A model of Bukit Panjang five-room resales with a block effect gives about {{MU}} for a 112 sqm flat on about the 12th floor in {{MONTH}}; one block standard deviation ({{SDBLK}}) gives {{LO}} to {{HI}}. Condition, renovation, the exact floor and negotiation move a price within and beyond that.</li>
+</ul></div>
+
+<h2>The market now</h2>
+<div class="block"><h3>HDB Resale Price Index since 1990 (shaded: falls of more than 5%)</h3><div id="e2" class="chart"></div></div>
+<div class="block" style="margin-top:14px"><h3>HDB index and Bukit Panjang (quality adjusted), 2012 Q1 = 100</h3><div id="e3" class="chart"></div></div>
+<p>The HDB index is at {{RPI}}, {{RPIFROM}} from its peak of {{RPIPEAK}} ({{RPIPEAKQ}}) and {{RPIYOY}} on the year: four quarters of moving sideways. Bukit Panjang, adjusted for flat type, size, floor and age, is at {{BPNOW}} against a peak of {{BPPEAK}} ({{BPPEAKM}}), {{BPVSPEAK}} and {{BPYOY}} on the year.</p>
+
+<h2>Does any condition tell you when to sell?</h2>
+<div class="block"><div id="e4" class="chart"></div>
+<p>A causal walk-forward on the HDB index, with mechanisms written down first: {{CONDYRS}} admitted condition-years, out-of-sample lift <b>{{ALLLIFT}}</b> overall and <b>{{ALL17}}</b> since 2017 (1.0 is no better than the base rate). Own momentum scored {{MOMLIFT}} but on only {{MOMN}} entries, {{MOMN17}} of them since 2017. Rates, rent growth and vacancy did better before 2017 and not since. Nothing meets the support rule used on the dashboard (a lift of at least 1.4 overall and since 2017, on at least 100 entries).</p></div>
+
+<h2>Base rates and past falls</h2>
+<div class="grid">
+<section class="block"><h3>HDB index after any quarter</h3><div class="tablewrap"><table><thead><tr><th>Window</th><th>Lower after 4 quarters</th><th>Median, 4 quarters</th><th>10th to 90th percentile</th><th>Lower after 8 quarters</th><th>Median, 8 quarters</th></tr></thead><tbody>{{BASE_ROWS}}</tbody></table></div></section>
+<section class="block"><h3>Falls of more than 5% from a peak</h3><div class="tablewrap"><table><thead><tr><th>Peak</th><th>Trough</th><th>Fall</th><th>Quarters down</th><th>Quarters to recover</th></tr></thead><tbody>{{DD_ROWS}}</tbody></table></div></section>
+</div>
+<div class="block" style="margin-top:14px"><h3>After earlier flat spells</h3>
+<p>The index has had {{FLAT_Q}} quarters in {{FLAT_S}} spells where the four-quarter change stayed within 1.5%, as now. The next four quarters had a median of {{FLAT_NEXT4}} and were lower {{FLAT_LOWER}} of the time; individual spells ran from about &minus;10% to +10%. The quarters overlap, so this is {{FLAT_S}} spells, not {{FLAT_Q}} independent observations.</p>
+<div class="tablewrap"><table><thead><tr><th>Spell</th><th>Quarters</th><th>Next 4 quarters, from the first quarter</th></tr></thead><tbody>{{SP_ROWS}}</tbody></table></div></div>
+
+<h2>One unexplained pattern: September</h2>
+<div class="block"><div id="e5" class="chart"></div>
+<p>In Bukit Panjang the quality-adjusted index rose in {{SEP_POS}} Septembers, by {{SEP_BP}} on average against {{SEP_OTHER}} in other months (t = {{SEP_T}}); September {{LASTYEAR}} was {{SEP_LAST}}. It does not show up elsewhere: other large towns average {{SEP_OTH_RANGE}}, and all towns pooled {{SEP_POOL}} (t = {{SEP_POOL_T}}). So it is a fact about one town&rsquo;s past with no explanation I can test, and it is not used as a forecast.</p></div>
+
+<h2>What this does and does not say</h2>
+<div class="block"><ul>
+<li>No condition in the framework has told you when HDB resale prices were about to rise or fall, so the evidence supports base rates, not a call.</li>
+<li>On past data the index was higher a year later in about two of three windows (median about +5%), lower in about one in three, over a wide range; the earlier flat spells went both ways.</li>
+<li>The block&rsquo;s premium over comparable flats has been steady, which matters more for the price a given flat might achieve than the town&rsquo;s direction.</li>
+<li>Nothing here models the costs of waiting or selling, loans, CPF, taxes, or the next home.</li>
+</ul></div>
+
+<footer>Research, not financial advice. Data: HDB resale transactions and the HDB Resale Price Index via data.gov.sg (Singapore Open Data Licence). A dated snapshot of the method in the <a href="https://github.com/quantarram/sg-buy-timing-dashboard">repository</a>; the block lookup on the <a href="./">dashboard</a> works for any block.</footer>
+</div>
+<script>
+const ink='#DDE8DD', grid='#2C302C';
+function lay(yt,extra){return Object.assign({margin:{l:56,r:14,t:10,b:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:ink,size:12,family:'Inter, sans-serif'},hovermode:'closest',legend:{orientation:'h',y:-0.22},xaxis:{gridcolor:grid,linecolor:grid},yaxis:{gridcolor:grid,linecolor:grid,title:yt}},extra||{})}
+const cfg={responsive:true,displaylogo:false};
+Plotly.newPlot('e1',{{C1}},lay('S$ thousand'),cfg);
+Plotly.newPlot('e2',{{C2L}},lay('index (2009 Q1 = 100)',{hovermode:'x unified',shapes:{{SHAPES}}}),cfg);
+Plotly.newPlot('e3',{{C2}},lay('index (2012 Q1 = 100)',{hovermode:'x unified'}),cfg);
+Plotly.newPlot('e4',{{C3}},lay('out-of-sample lift over base rate',{barmode:'group',shapes:[{type:'line',xref:'paper',x0:0,x1:1,y0:1,y1:1,line:{color:'#DDE8DD',width:1,dash:'dot'}}]}),cfg);
+Plotly.newPlot('e5',{{C4}},lay('average monthly change, percent',{barmode:'group'}),cfg);
+</script>
+</body></html>

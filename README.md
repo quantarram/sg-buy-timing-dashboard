@@ -27,6 +27,8 @@ It is a general, public research tool with nothing personalised in it, and it is
 - **HDB resale transactions** (HDB via data.gov.sg): every registered resale since March 2012 (331,529 transactions, 9,826 blocks). `pipelines/build_hdb.py` builds a search index and one compact file per town in `docs/hdb/`, which the page uses for the block lookup; raw transactions are not committed.
 - **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
+**Worked example:** [selling a five-room flat on floors 10 to 15 at BLK 184 Jelebu Rd](https://quantarram.github.io/sg-buy-timing-dashboard/example-184-jelebu.html), a dated snapshot built by `pipelines/build_example.py` from public HDB data; the HDB index walk-forward is `research/hdb_rpi_cpe_walkforward.py`.
+
 ## First findings (COE)
 
 Monthly series from 2002 (296 months), old Category A and B, eight registered predictor families, a causal walk-forward from 2010 (details and caveats in `research/RESULTS.md`).

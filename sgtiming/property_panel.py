@@ -100,6 +100,12 @@ def executive_condos():
     return d
 
 
+def hdb_rpi():
+    """HDB Resale Price Index (1Q2009 = 100), quarterly from 1990."""
+    h = _read("hdb_rpi"); h["quarter"] = _q(h["quarter"])
+    return h.set_index("quarter")["index"].astype(float).sort_index()
+
+
 def sources():
     import json
     return json.load(open(os.path.join(DATA, "_sources.json")))

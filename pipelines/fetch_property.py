@@ -27,6 +27,8 @@ SETS = {
     "unsold_approved": "d_84d05d45049108f0fd2e99b66bd19cfe",
     "ec_vacant_pipeline": "d_361d4f4313d30951c76beaa343fd7ce1",
     "ec_sale_position": "d_8b71bc3e1386261039d7ad95efdc3328",
+    # HDB
+    "hdb_rpi": "d_14f63e595975691e7c24a27ae4c07c79",
     # credit
 }
 OUT = os.path.join(ROOT, "data", "property"); os.makedirs(OUT, exist_ok=True)
