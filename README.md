@@ -27,7 +27,7 @@ It is a general, public research tool with nothing personalised in it, and it is
 - **HDB resale transactions** (HDB via data.gov.sg): every registered resale since March 2012 (331,529 transactions, 9,826 blocks). `pipelines/build_hdb.py` builds a search index and one compact file per town in `docs/hdb/`, which the page uses for the block lookup; raw transactions are not committed.
 - **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
-**Preprint draft:** `paper/singapore_timing_paper_draft.pdf` (Paper 18 of the CPE series: the ten-year echo in the COE premium, and why housing timing signals fail out of sample); rebuilt from the data by `paper/build.sh`, every number recomputed by `paper/paper_numbers.py`.
+**Preprint:** [Zenodo](https://zenodo.org/records/23418466) (`paper/singapore_timing_paper_draft.pdf`) (Paper 18 of the CPE series: the ten-year echo in the COE premium, and why housing timing signals fail out of sample); rebuilt from the data by `paper/build.sh`, every number recomputed by `paper/paper_numbers.py`.
 
 **Track record:** the page keeps a forward ledger in `data/ledger/` (base-rate forecasts logged each month or quarter, and any active supported condition, scored as outcomes arrive) and replays the base rates causally over the past; both are updated by the daily workflow (`pipelines/update_ledger.py`).
 
