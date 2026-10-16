@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper."
+title: "Singapore buy-timing dashboard"
+type: software
+authors:
+  - family-names: "Ramanathan S"
+    given-names: "Arun"
+repository-code: "https://github.com/quantarram/sg-buy-timing-dashboard"
+url: "https://quantarram.github.io/sg-buy-timing-dashboard/"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Ramanathan S"
+      given-names: "Arun"
+  title: "The Ten-Year Echo in Singapore's COE Premium, and Why Housing Timing Signals Fail Out of Sample"
+  year: 2026
+  journal: "Zenodo"
+  doi: "10.5281/zenodo.23418466"
+  url: "https://doi.org/10.5281/zenodo.23418466"

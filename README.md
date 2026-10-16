@@ -6,13 +6,17 @@ A research dashboard for deciding **when** to buy a car and a home in Singapore,
 
 It is a general, public research tool with nothing personalised in it, and it is not financial advice.
 
+**Paper:** Ramanathan S, A. (2026). *The Ten-Year Echo in Singapore's COE Premium, and Why Housing Timing Signals Fail Out of Sample.* Zenodo, [doi:10.5281/zenodo.23418466](https://doi.org/10.5281/zenodo.23418466) (Paper 18 of the CPE research series). Write-up: [Substack](https://arunramanathans.substack.com/p/the-ten-year-echo-in-singapores-coe).
+
+**Author:** Arun Ramanathan, PhD (Independent Researcher, Singapore) · [LinkedIn](https://www.linkedin.com/in/arun-rs) · [Substack](https://arunramanathans.substack.com) · [CPE research program](https://github.com/quantarram/quant-regime-research)
+
 ## Scope
 
 | Phase | What | Status |
 |---|---|---|
 | 1 | Cars: COE premium, Category A and B (monthly series from 2002) | data layer and causal walk-forward done; one modest supply effect, nothing firing now |
 | 2 | Property: executive condominiums, private condominiums (non-landed) and landed | data layer and causal walk-forward done: no timing signal survives the latest decade; EC prices from URA transactions |
-| 3 | Dashboard: one public panel for any Singapore buyer (general conditions and probabilities, nothing personalised) | not started |
+| 3 | Dashboard: one public panel for any Singapore buyer (general conditions and probabilities, nothing personalised), a lookup for any HDB block and a forward ledger that scores its own forecasts | live; rebuilt daily |
 
 ## Data (public)
 
@@ -27,7 +31,7 @@ It is a general, public research tool with nothing personalised in it, and it is
 - **HDB resale transactions** (HDB via data.gov.sg): every registered resale since March 2012 (331,529 transactions, 9,826 blocks). `pipelines/build_hdb.py` builds a search index and one compact file per town in `docs/hdb/`, which the page uses for the block lookup; raw transactions are not committed.
 - **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
-**Preprint:** [Zenodo](https://zenodo.org/records/23418466) (`paper/singapore_timing_paper_draft.pdf`) (Paper 18 of the CPE series: the ten-year echo in the COE premium, and why housing timing signals fail out of sample); rebuilt from the data by `paper/build.sh`, every number recomputed by `paper/paper_numbers.py`.
+**Preprint:** [Zenodo](https://zenodo.org/records/23418466) (also `paper/singapore_timing_paper_draft.pdf`): the ten-year echo in the COE premium, and why housing timing signals fail out of sample. Rebuilt from the data by `paper/build.sh`; every number is recomputed by `paper/paper_numbers.py`.
 
 **Track record:** the page keeps a forward ledger in `data/ledger/` (base-rate forecasts logged each month or quarter, and any active supported condition, scored as outcomes arrive) and replays the base rates causally over the past; both are updated by the daily workflow (`pipelines/update_ledger.py`).
 
@@ -38,7 +42,7 @@ It is a general, public research tool with nothing personalised in it, and it is
 Monthly series from 2002 (296 months), old Category A and B, eight registered predictor families, a causal walk-forward from 2010 (details and caveats in `research/RESULTS.md`).
 
 - Latest (September 2026, monthly mean of the two rounds): Category A S$132,450, the highest on record; Category B S$134,000.
-- Overall the walk-forward lift is modest (1.31). Supply-side conditions did best: after a quota cut the premium was in its top 20% of twelve-month moves 50% of the time against a 22% base. Interest rates and de-registrations added nothing, and the effect is uneven from year to year.
+- Overall the walk-forward lift is modest (1.31 over 848 condition-years). Two families meet the support rule: quota change (lift 1.76) and the Category B/A spread (1.41). After a quota cut the premium was in its top 20% of moves 49% of the time twelve months later, against 24% normally; it held across all 27 tail-threshold combinations and in both 2010 to 2016 and 2017 to 2021, but it is **not detected from 2022** (lift 1.3 on 17 entries; the quota formula changed in August 2022 and February 2023). Interest rates and short-run de-registrations added nothing.
 - There is a decade-long cycle (premium troughs in 2009 and 2019, peaks around 2013): it follows the ten-year COE life, which drives de-registrations and so quota, with the premium lagging the supply cycle by 18 to 24 months. Scheduled expiries point to rising quota through 2027 to 2028. Only two cycles, so turning points are not validated as forecasts.
 - No admitted condition is firing now. The dashboard will show base rates, the quota calendar and the state of each predictor, and say so when nothing is active.
 - Base rates over the last ten years: after three months the Category A premium was higher 63% of the time and rose more than 5% in 45% of windows; after six months the median change was +6.5%. These carry a decade of rising premiums.
@@ -46,7 +50,7 @@ Monthly series from 2002 (296 months), old Category A and B, eight registered pr
 ## First findings (property)
 
 - Quarterly URA series to 2026 Q2; all price indices are at or near their peaks (landed +7.0% year on year, condo +1.8%).
-- A causal walk-forward over nine registered predictor families finds nothing that beats the base rate in the latest decade (lift 0.64 since 2017). Price momentum scored 3.6 up to 2016 (the 2008 to 2010 swings) and 0.7 since.
+- A causal walk-forward over nine registered predictor families (1,622 condition-years) finds nothing that beats the base rate in the latest decade (lift 0.96 overall, 0.64 since 2017). Price momentum scored 3.6 up to 2016 (the 2008 to 2010 swings) and 0.7 since. The HDB Resale Price Index scores 0.82 overall and 0.28 since 2017.
 - The last decade was almost one-way up, so the long view carries the risk: non-landed prices fell 47% (1981 to 1986), 42% (1996 to 1998), 26% (2008 to 2009) and 10% (2013 to 2017). Details in `research/PROPERTY_RESULTS.md`.
 
 ## Layout
@@ -60,4 +64,23 @@ data/            committed raw public data
 
 ## Citation and data licence
 
-Cite the repository. The underlying data are published by the Land Transport Authority and other Singapore agencies under the Singapore Open Data Licence.
+If you use this work, please cite the paper (GitHub's "Cite this repository" button, from `CITATION.cff`, gives the same):
+
+```
+RAMANATHAN S, A. (2026). The Ten-Year Echo in Singapore's COE Premium, and Why
+Housing Timing Signals Fail Out of Sample. Zenodo.
+https://doi.org/10.5281/zenodo.23418466
+```
+
+```bibtex
+@misc{ramanathan2026tenyearecho,
+  author    = {Ramanathan S, Arun},
+  title     = {The Ten-Year Echo in Singapore's COE Premium, and Why Housing Timing Signals Fail Out of Sample},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23418466},
+  url       = {https://doi.org/10.5281/zenodo.23418466}
+}
+```
+
+The underlying data are published by the Land Transport Authority, the Housing and Development Board, the Urban Redevelopment Authority, the Monetary Authority of Singapore and the Department of Statistics under the Singapore Open Data Licence (URA Data Service transactions are used under its terms; only monthly aggregates are committed). This is research, not financial advice.
