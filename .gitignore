@@ -2,5 +2,3 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
-# the private view (your own budget, timeline and rules) stays on this machine
-private/
