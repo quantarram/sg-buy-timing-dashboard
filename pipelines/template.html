@@ -43,6 +43,10 @@ p{margin:.55rem 0}ul{padding-left:1.2rem;margin:.4rem 0}li{margin:.3rem 0}
 .legend{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:12.5px;align-items:center}
 footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid var(--border);padding-top:14px}
 a{color:var(--gold)}
+.hdbin{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border2);background:var(--card2);color:var(--text);font:14px 'Inter',sans-serif}
+.hdbres{margin-top:6px;border:1px solid var(--border);border-radius:10px;overflow:hidden;display:none}
+.hdbres button{display:block;width:100%;text-align:left;padding:9px 12px;background:var(--card);color:var(--text);border:0;border-bottom:1px solid var(--border);font:13px 'Inter',sans-serif;cursor:pointer}
+.hdbres button:hover,.hdbres button:focus-visible{background:var(--card2)}.hdbres small{color:var(--muted)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style>
 </head>
@@ -106,6 +110,15 @@ a{color:var(--gold)}
 <div class="block"><div id="pp4" class="chart"></div></div>
 <div class="block tablewrap" style="margin-top:14px">{{PROP_EC_PRICES}}</div>
 
+<h2>HDB resale: look up a block</h2>
+<p class="tag">Every registered HDB resale since March 2012 (HDB, via data.gov.sg). Type a block number and street, or a town. Prices depend on the unit's storey, size, renovation and remaining lease, so a block's recent sales are a guide to its range, not a valuation.</p>
+<div class="block">
+<label for="hdbq" class="tag">Block, street or town</label>
+<input id="hdbq" class="hdbin" type="search" placeholder="e.g. 277 Yishun St 22, or Toa Payoh" autocomplete="off" aria-controls="hdbres">
+<div id="hdbres" class="hdbres" role="listbox"></div>
+<div id="hdbout" style="margin-top:14px"></div>
+</div>
+
 <h2>What the property evidence supports</h2>
 {{PROP_EVIDENCE}}
 
@@ -122,5 +135,50 @@ Plotly.newPlot('pp1',{{PROP_C1}},lay('index (2009 Q1 = 100)'),cfg);
 Plotly.newPlot('pp2',{{PROP_C2}},lay('index (2009 Q1 = 100)'),cfg);
 Plotly.newPlot('pp4',{{PROP_C4}},lay('S$ per sq ft',{hovermode:'x unified'}),cfg);
 Plotly.newPlot('pp3',{{PROP_C3}},lay('units per quarter',{barmode:'stack'}),cfg);
+
+(function(){
+  const q=document.getElementById('hdbq'),res=document.getElementById('hdbres'),out=document.getElementById('hdbout');
+  let IDX=null,META=null;const cache={};
+  const fmt=n=>'S$'+Math.round(n).toLocaleString('en-US');
+  const med=a=>{if(!a.length)return null;const s=a.slice().sort((x,y)=>x-y),m=s.length>>1;return s.length%2?s[m]:(s[m-1]+s[m])/2};
+  const psf=(p,a)=>p/(a*10.7639);
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  fetch('hdb/index.json').then(r=>r.json()).then(j=>{IDX=j.blocks;META=j.meta;}).catch(()=>{out.textContent='The block lookup data could not be loaded.';});
+  q.addEventListener('input',()=>{
+    res.innerHTML='';res.style.display='none';
+    const terms=q.value.toUpperCase().split(/\s+/).filter(Boolean);if(!IDX||!terms.length)return;
+    const hits=[];
+    for(const b of IDX){const lab=b[0]+' '+b[1]+' '+b[2];let ok=true;for(const t of terms){if(lab.indexOf(t)<0){ok=false;break}}if(ok)hits.push(b);}
+    hits.sort((a,b)=>(b[0]===terms[0])-(a[0]===terms[0])||b[3]-a[3]);
+    hits.slice(0,12).forEach(b=>{const el=document.createElement('button');el.type='button';el.setAttribute('role','option');el.innerHTML='BLK '+esc(b[0])+' '+esc(b[1])+' <small>'+esc(b[2])+' &middot; '+b[3]+' sales</small>';el.onclick=()=>{res.style.display='none';q.value='BLK '+b[0]+' '+b[1];show(b);};res.appendChild(el);});
+    if(hits.length)res.style.display='block';else{res.innerHTML='<button type="button" disabled>No block found</button>';res.style.display='block';}
+  });
+  async function town(slug){if(!cache[slug])cache[slug]=fetch('hdb/'+slug+'.json').then(r=>r.json());return cache[slug];}
+  async function show(b){
+    out.textContent='Loading...';const T=await town(META.towns[b[2]]),blk=T.blocks[b[0]+'|'+b[1]];
+    const last=META.months.length-1;
+    const tx=blk.tx.map(a=>({mi:a[0],m:META.months[a[0]],ft:META.flat_types[a[1]],st:a[2],area:a[3],price:a[4],model:META.models[a[5]]}));
+    const fts=[...new Set(tx.map(x=>x.ft))];
+    let rows='';
+    fts.forEach(ft=>{
+      const all=tx.filter(x=>x.ft===ft),r12=all.filter(x=>x.mi>last-12),p12=all.filter(x=>x.mi<=last-12&&x.mi>last-24);
+      const m12=med(r12.map(x=>x.price)),mp=med(p12.map(x=>x.price)),ps=med(r12.map(x=>psf(x.price,x.area)));
+      const tm=(T.town_med[ft]||[]).slice(last-11,last+1).filter(v=>v!==null),tmed=med(tm);
+      const yoy=(m12&&mp)?((m12/mp-1)*100).toFixed(1)+'%':'n/a',vt=(m12&&tmed)?((m12/tmed-1)*100).toFixed(1)+'%':'n/a';
+      rows+='<tr><td>'+esc(ft)+'</td><td class="num">'+all.length+'</td><td class="num">'+r12.length+'</td><td class="num">'+(m12?fmt(m12):'no sales')+'</td><td class="num">'+(ps?fmt(ps):'')+'</td><td class="num">'+yoy+'</td><td class="num">'+(tmed?fmt(tmed):'n/a')+'</td><td class="num">'+vt+'</td></tr>';
+    });
+    const recent=tx.slice(-15).reverse().map(x=>'<tr><td>'+x.m+'</td><td>'+esc(x.ft)+'</td><td class="num">'+(x.st||'')+'</td><td class="num">'+x.area+'</td><td>'+esc(x.model)+'</td><td class="num">'+fmt(x.price)+'</td><td class="num">'+fmt(psf(x.price,x.area))+'</td></tr>').join('');
+    out.innerHTML='<h3>BLK '+esc(b[0])+' '+esc(b[1])+' <span class="tag">'+esc(b[2])+(blk.lease?' &middot; lease from '+blk.lease:'')+' &middot; '+tx.length+' resales since '+META.months[0]+'</span></h3>'
+      +'<div class="tablewrap" style="margin-top:10px"><table><thead><tr><th>Flat type</th><th>Sales since 2012</th><th>Last 12 months</th><th>Median price</th><th>Median per sq ft</th><th>vs prior 12 months</th><th>Town median, same type</th><th>Block vs town</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+      +'<div id="hdbchart" class="chart" style="margin-top:12px"></div>'
+      +'<h3 style="margin-top:8px">Latest sales</h3><div class="tablewrap"><table><thead><tr><th>Month</th><th>Flat type</th><th>Storey (mid)</th><th>Area (sqm)</th><th>Model</th><th>Price</th><th>Per sq ft</th></tr></thead><tbody>'+recent+'</tbody></table></div>'
+      +'<p class="tag" style="margin-top:8px">Town median is the median of the town&rsquo;s monthly medians for that flat type over the last 12 months. Sales within a block differ by storey, size and lease, which this does not adjust for.</p>';
+    const pal=['#C9A84C','#7FB5E0','#4DB87A','#E08FB8','#B07FE0','#E8A020','#7A8F7A'];
+    const traces=fts.map((ft,i)=>{const s=tx.filter(x=>x.ft===ft);return {x:s.map(x=>x.m+'-01'),y:s.map(x=>x.price/1000),text:s.map(x=>x.model+', storey '+x.st+', '+x.area+' sqm'),name:ft,type:'scatter',mode:'markers',marker:{color:pal[i%pal.length],size:7,opacity:.85},hovertemplate:'%{x|%b %Y}<br>S$%{y:,.0f}k<br>%{text}<extra>'+ft+'</extra>'}});
+    const main=fts.slice().sort((a,c)=>tx.filter(x=>x.ft===c).length-tx.filter(x=>x.ft===a).length)[0];
+    const tmv=T.town_med[main]||[];traces.push({x:META.months.map(m=>m+'-01'),y:tmv.map(v=>v===null?null:v/1000),name:'Town median, '+main,type:'scatter',mode:'lines',line:{color:'#7A8F7A',width:1.5,dash:'dot'},connectgaps:false});
+    Plotly.newPlot('hdbchart',traces,{margin:{l:56,r:14,t:10,b:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:'#DDE8DD',size:12,family:'Inter, sans-serif'},xaxis:{gridcolor:'#2C302C',linecolor:'#2C302C'},yaxis:{gridcolor:'#2C302C',linecolor:'#2C302C',title:'S$ thousand'},legend:{orientation:'h',y:-0.2},hovermode:'closest'},{responsive:true,displaylogo:false});
+  }
+})();
 </script>
 </body></html>

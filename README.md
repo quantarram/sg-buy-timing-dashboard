@@ -24,6 +24,7 @@ It is a general, public research tool with nothing personalised in it, and it is
   - activity: units transacted (new sale, resale, sub sale; whole island from 1999 and by region from 2004), uncompleted units launched and sold by region, completed units sold;
   - supply: pipeline by status (landed and non-landed, from 1993), available and vacant stock (from 1988), unsold approved units (from 2006);
   - executive condominiums: launches, new and resale sales, sale position, available, vacant and pipeline (from 2008 to 2010); **no EC price series is on data.gov.sg**, so EC and condo prices per square foot come from the URA Data Service API (free access key; five years of single-unit transactions, updated Tuesdays and Fridays; only monthly aggregates are committed).
+- **HDB resale transactions** (HDB via data.gov.sg): every registered resale since March 2012 (331,529 transactions, 9,826 blocks). `pipelines/build_hdb.py` builds a search index and one compact file per town in `docs/hdb/`, which the page uses for the block lookup; raw transactions are not committed.
 - **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
 ## First findings (COE)
