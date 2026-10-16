@@ -90,3 +90,12 @@ for k in ['fam', 'tf', 'q', 'cat', 'side', 'year']:
     for v, g in S.groupby(k): out.append(summarise(g, f'{k}={v}'))
 T = pd.DataFrame(out); pd.set_option('display.width', 200); print(T.round(3).to_string(index=False))
 T.to_csv(os.path.join(ROOT, 'research', 'coe_walkforward_summary.csv'), index=False); S.drop(columns=['mo_te']).to_csv(os.path.join(ROOT, 'research', 'coe_walkforward_admitted.csv'), index=False)
+
+# ---- family support table used by the dashboard: lift over all test years and over 2017 onward
+def _lift(g):
+    if len(g) == 0: return (np.nan, 0)
+    b, n = pooled_base(g); h = g.hits.sum(); return ((h / n) / (b / n) if b > 0 else np.nan, int(n))
+sup = []
+for fam, g in list(S.groupby('fam')) + [('ALL', S)]:
+    a = _lift(g); r = _lift(g[g.year >= 2017]); e = _lift(g[g.year <= 2016]); sup.append(dict(family=fam, lift_all=a[0], entries_all=a[1], lift_2017=r[0], entries_2017=r[1], lift_pre2017=e[0], entries_pre2017=e[1], cond_years=len(g)))
+pd.DataFrame(sup).to_csv(os.path.join(ROOT, 'research', 'coe_family_support.csv'), index=False)

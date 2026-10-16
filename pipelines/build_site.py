@@ -12,6 +12,12 @@ ex = pd.read_csv(os.path.join(ROOT, "data", "coe_results.csv"))
 for c in ["quota", "bids_success", "bids_received", "premium"]: ex[c] = pd.to_numeric(ex[c], errors="coerce")
 ex["t"] = pd.to_datetime(ex["month"] + "-01") + pd.to_timedelta((ex["bidding_no"] - 1) * 14, unit="D")
 WF = pd.read_csv(os.path.join(ROOT, "research", "coe_walkforward_summary.csv")).set_index("group")
+SUP = pd.read_csv(os.path.join(ROOT, "research", "coe_family_support.csv")).set_index("family")
+sys.path.insert(0, os.path.join(ROOT, "pipelines"))
+import property_section
+def is_supported(fam):
+    """A family counts as supported when its walk-forward lift is at least 1.4 over all test years and since 2017, on at least 100 entries (the quota-implied level is excluded: specification problem)."""
+    return property_section.supported(SUP, fam)
 CAT = {"A": "Category A", "B": "Category B"}
 SGT = dt.timezone(dt.timedelta(hours=8)); now = dt.datetime.now(SGT)
 fmt = lambda v: f"{v:,.0f}"
@@ -26,24 +32,25 @@ for c, name in CAT.items():
                     hi12=s["premium"].iloc[-26:].max(), lo12=s["premium"].iloc[-26:].min(), ath=s["premium"].max(), ath_date=s.loc[s["premium"].idxmax(), "t"].strftime("%b %Y"))
 
 # ---- registered predictors, current state ------------------------------------------------------------------------------------------------------
-EVID = {"quota": ("Quota change", "a cut leads to a higher premium; increases do not lead to lower", WF.loc["fam=quota", "lift"], int(WF.loc["fam=quota", "entries"])),
-        "spread": ("B/A spread", "A and B premiums move back toward each other", WF.loc["fam=spread", "lift"], int(WF.loc["fam=spread", "entries"])),
-        "bids": ("Bids per quota", "heavier bidding leads to a higher premium", WF.loc["fam=bids", "lift"], int(WF.loc["fam=bids", "entries"])),
-        "value": ("Premium vs its 12-month mean", "reversion toward the mean", None, 0),
-        "momentum": ("Premium momentum", "continuation", WF.loc["fam=momentum", "lift"], int(WF.loc["fam=momentum", "entries"])),
-        "supplycycle": ("Supply cycle (de-registrations 6 to 18 months ago)", "falling supply leads to a higher premium", WF.loc["fam=supplycycle", "lift"], int(WF.loc["fam=supplycycle", "entries"]))}
+L = lambda f: (float(SUP.loc[f, "lift_all"]), int(SUP.loc[f, "entries_all"]), float(SUP.loc[f, "lift_2017"]))
+EVID = {"quota": ("Quota change", "a cut leads to a higher premium; increases do not lead to lower", *L("quota")),
+        "spread": ("B/A spread", "A and B premiums move back toward each other", *L("spread")),
+        "bids": ("Bids per quota", "heavier bidding leads to a higher premium", *L("bids")),
+        "value": ("Premium vs its 12-month mean", "reversion toward the mean", None, 0, None),
+        "momentum": ("Premium momentum", "continuation", *L("momentum")),
+        "supplycycle": ("Supply cycle (de-registrations 6 to 18 months ago)", "falling supply leads to a higher premium", *L("supplycycle"))}
 state = {}; active = {}
 for c in CAT:
     lp, lq, X, sign = build_X(c, Q, F, R); rows = []
     for fam, tau in [("quota", 6), ("quota", 12), ("bids", 6), ("spread", 0), ("value", 0), ("momentum", 6), ("supplycycle", 12)]:
         xs = X[(fam, tau)]; v = xs.iloc[-1]; hist = xs.iloc[:-1].dropna(); pct = float((hist < v).mean() * 100) if pd.notna(v) else np.nan
         tail = "low" if pct <= 20 else ("high" if pct >= 80 else "")
-        evid = EVID[fam]; supported = evid[2] is not None and evid[2] >= 1.4 and fam in ("quota", "spread")
+        evid = EVID[fam]; supported = is_supported(fam)
         # an admitted condition: quota cut (low tail) for quota; either spread tail
         is_active = bool(supported and tail and (fam != "quota" or tail == "low"))
         implied = ""
         if is_active: implied = "higher" if (sign[fam] > 0) == (tail == "high") else "lower"
-        rows.append(dict(fam=fam, tau=tau, value=v, pct=pct, tail=tail, active=is_active, implied=implied, label=evid[0] + (f" ({tau} months)" if tau else ""), mech=evid[1], lift=evid[2], n=evid[3]))
+        rows.append(dict(fam=fam, tau=tau, value=v, pct=pct, tail=tail, active=is_active, implied=implied, label=evid[0] + (f" ({tau} months)" if tau else ""), mech=evid[1], lift=evid[2], n=evid[3], lift17=evid[4]))
     state[c] = rows; active[c] = [r for r in rows if r["active"]]
 
 # ---- base rates -----------------------------------------------------------------------------------------------------------------------------------
@@ -93,7 +100,7 @@ def state_table(c):
     out = ['<table><thead><tr><th>Predictor</th><th>Percentile</th><th>Read</th><th>Past evidence</th></tr></thead><tbody>']
     for r in state[c]:
         read = pill(f"active: premium {r['implied']}", "warn") if r["active"] else (pill("tail, no supported effect", "note") if r["tail"] else pill("normal range", "neutral"))
-        ev = (f"lift {r['lift']:.2f} on {r['n']:,} entries" + (" (too few to rely on)" if r["n"] < 100 else "")) if r["lift"] is not None else "not scored on its own"
+        ev = (f"lift {r['lift']:.2f} on {r['n']:,} entries; since 2017: {r['lift17']:.2f}" + (" (too few to rely on)" if r["n"] < 100 else "")) if r["lift"] is not None and r["lift17"] == r["lift17"] else ("not scored on its own" if r["lift"] is None else f"lift {r['lift']:.2f} on {r['n']:,} entries")
         out.append(f'<tr><td>{r["label"]}</td><td class="num">{r["pct"]:.0f}</td><td>{read}</td><td>{ev}</td></tr>')
     out.append("</tbody></table>"); return "".join(out)
 def base_table():
@@ -103,14 +110,17 @@ def base_table():
             a, b = base["A"][lab][h], base["B"][lab][h]
             rows.append(f'<tr><td>{h} months ahead, {lab}</td>' + "".join(f'<td class="num">{x["lower"]*100:.0f}%</td><td class="num">{x["up5"]*100:.0f}%</td><td class="num">{x["med"]*100:+.1f}%</td>' for x in (a, b)) + "</tr>")
     rows.append("</tbody></table>"); return "".join(rows)
-n_act = sum(len(v) for v in active.values()); VA, VB = verdict("A"), verdict("B")
+PROP = property_section.build(pd.read_csv(os.path.join(ROOT, 'research', 'property_family_support.csv')).set_index('family'))
+n_act = sum(len(v) for v in active.values()) + PROP['PROP_ACTIVE']; VA, VB = verdict("A"), verdict("B")
+VP = ("WAIT &amp; WATCH", "neutral") if not PROP['PROP_ACTIVE'] else ("CONDITION ACTIVE", "warn")
 if not n_act:
-    headline = ("<b>WAIT &amp; WATCH.</b> No registered condition is active in either category, so timing carries no measured edge right now. Premiums are near record highs: read the base rates and the supply cycle below."
+    headline = ("<b>WAIT &amp; WATCH.</b> No registered condition is active for cars or for property, so timing carries no measured edge right now. COE premiums and property indices are near record highs: read the base rates, the supply cycle and the drawdown history below."
                 "<div class='sub2'>This is not a recommendation to delay a purchase you need. A verdict other than wait and watch appears only when a condition with out-of-sample support is in its tail.</div>")
 else:
     headline = (f"<b>{VA[0]} (A) &middot; {VB[0]} (B).</b> {n_act} registered condition(s) active; the table below shows what each implies and how much past evidence stands behind it."
                 "<div class='sub2'>Each verdict is a statement about conditions and base rates, not a recommendation.</div>")
 badges = "".join(f'<div class="vbadge {TONE[v[1]]}"><span class="vl">Category {c}</span><span class="vt">{v[0]}</span></div>' for c, v in (("A", VA), ("B", VB)))
+badges += f'<div class="vbadge {TONE[VP[1]]}"><span class="vl">Property</span><span class="vt">{VP[0]}</span></div>'
 legend = "".join(f'<div>{pill(t, k)}</div><div>{d}</div>' for t, k, d in (
     ("WAIT &amp; WATCH", "neutral", "No registered condition with out-of-sample support is in its tail. No measured timing edge; the base rates apply."),
     ("RISING PRESSURE", "warn", "A supported condition (today: a quota cut) is active and past data say the premium was more often in its top moves over the following 6 to 12 months."),
@@ -123,6 +133,7 @@ rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{BADGES}}": badges, "{{LEGE
        "{{LONG}}": json.dumps(long_traces), "{{RECENT}}": json.dumps(recent), "{{CYCLE}}": json.dumps(cycle_traces),
        "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}",
        "{{ENTRIES}}": f'{int(WF.loc["ALL admitted", "entries"]):,}'}
+for k_, v_ in PROP.items(): rep["{{" + k_ + "}}"] = str(v_)
 for k, v in rep.items(): html = html.replace(k, v)
 os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True); open(os.path.join(ROOT, "docs", "index.html"), "w", encoding="utf-8").write(html)
 open(os.path.join(ROOT, "docs", ".nojekyll"), "w").close()

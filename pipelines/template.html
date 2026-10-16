@@ -49,7 +49,7 @@ a{color:var(--gold)}
 <body><div class="page">
 <div class="header">
   <div><div class="h-sub">Singapore &middot; Public data &middot; CPE framework</div>
-  <div class="h-title"><em>Buy-Timing</em> Dashboard: Cars (COE)</div>
+  <div class="h-title"><em>Buy-Timing</em> Dashboard: Cars &amp; Property</div>
   <div class="h-meta">{{ASOF}}</div></div>
   <div class="badges">{{BADGES}}</div>
 </div>
@@ -82,8 +82,27 @@ a{color:var(--gold)}
 <li><b>Limits.</b> Monthly data from 2002, a rule change in quota in 2022 and 2023, two supply cycles, public data only, no costs of ownership.</li>
 </ul></div>
 
-<h2>Property: next</h2>
-<div class="block"><p>Executive condominiums, private condominiums and landed homes are next. The public data are identified on data.gov.sg: URA price and rental indices (quarterly, from 1975; non-landed by region from 2004), executive condominium launches, sales and supply pipeline, available and vacant stock, outstanding housing loans, and mortgage benchmark rates. Quarterly data and a handful of cycles mean this part will be a conditions-and-risk panel with probability statements only where the evidence supports them.</p></div>
+<h2>Property (private residential)</h2>
+<p class="tag">URA price and rental indices (2009 Q1 = 100), quarterly to {{PROP_Q}}. Condo means private non-landed. Executive condominium prices are not on the public data portal, so the EC panel below covers activity and supply only.</p>
+<div class="grid">{{PROP_CARDS}}</div>
+<div class="block"><h3>Price indices since 1975 (regions since 2004)</h3><div id="pp1" class="chart"></div></div>
+<div class="block" style="margin-top:14px"><h3>Condo prices against rents, since 1990</h3><div id="pp2" class="chart"></div></div>
+<div class="block" style="margin-top:14px"><h3>Private units transacted per quarter</h3><div id="pp3" class="chart"></div></div>
+
+<h2>What the registered property conditions say now</h2>
+<p class="tag">Same discipline as for cars: mechanisms written down first, percentile against all earlier quarters, and a causal walk-forward. A family is "supported" only if its lift is at least 1.4 over all test years and also since 2017, on at least 100 entries. No property family passes.</p>
+<div class="grid"><section class="block"><h3>Condo, all regions</h3><div class="tablewrap">{{PROP_STATE_CONDO}}</div></section><section class="block"><h3>Landed</h3><div class="tablewrap">{{PROP_STATE_LANDED}}</div></section></div>
+
+<h2>Property base rates and drawdowns</h2>
+<p class="tag">How often the index was lower four and eight quarters later. The last ten years were almost one-way up, so the longer window is the fairer guide to risk.</p>
+<div class="block tablewrap">{{PROP_BASE}}</div>
+<div class="block tablewrap" style="margin-top:14px"><h3>Falls of more than 10% from a peak</h3>{{PROP_DD}}</div>
+
+<h2>Supply, activity and executive condominiums</h2>
+<div class="grid"><section class="block"><h3>Private market</h3>{{PROP_SUPPLY}}</section><section class="block"><h3>Executive condominiums (activity and supply only)</h3>{{PROP_EC}}</section></div>
+
+<h2>What the property evidence supports</h2>
+{{PROP_EVIDENCE}}
 
 <footer>Research, not financial advice. A "wait and watch" verdict means no measured timing edge; it is not a recommendation to delay a purchase you need. Data: Land Transport Authority, Singapore Department of Statistics and the Monetary Authority of Singapore via data.gov.sg (Singapore Open Data Licence). The page is rebuilt every day, but the figures only change when new data are published: COE results twice a month, vehicle statistics and interest rates monthly, property indices quarterly. Method and code: the <a href="https://github.com/quantarram/sg-buy-timing-dashboard">repository</a> and the <a href="https://github.com/quantarram/quant-regime-research">CPE framework</a>.</footer>
 </div>
@@ -94,5 +113,8 @@ const cfg={responsive:true,displaylogo:false};
 Plotly.newPlot('long',{{LONG}},lay('S$ thousand'),cfg);
 Plotly.newPlot('recent',{{RECENT}},lay('S$ thousand'),cfg);
 Plotly.newPlot('cycle',{{CYCLE}},lay('vehicles per month'),cfg);
+Plotly.newPlot('pp1',{{PROP_C1}},lay('index (2009 Q1 = 100)'),cfg);
+Plotly.newPlot('pp2',{{PROP_C2}},lay('index (2009 Q1 = 100)'),cfg);
+Plotly.newPlot('pp3',{{PROP_C3}},lay('units per quarter',{barmode:'stack'}),cfg);
 </script>
 </body></html>

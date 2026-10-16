@@ -11,7 +11,7 @@ It is a general, public research tool with nothing personalised in it, and it is
 | Phase | What | Status |
 |---|---|---|
 | 1 | Cars: COE premium, Category A and B (monthly series from 2002) | data layer and causal walk-forward done; one modest supply effect, nothing firing now |
-| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | public data layer done (quarterly series to Q2 2026); EC prices need a URA key; CPE analysis not started |
+| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | data layer and causal walk-forward done: no timing signal survives the latest decade; EC prices need a URA key |
 | 3 | Dashboard: one public panel for any Singapore buyer (general conditions and probabilities, nothing personalised) | not started |
 
 ## Data (public)
@@ -35,6 +35,12 @@ Monthly series from 2002 (296 months), old Category A and B, eight registered pr
 - There is a decade-long cycle (premium troughs in 2009 and 2019, peaks around 2013): it follows the ten-year COE life, which drives de-registrations and so quota, with the premium lagging the supply cycle by 18 to 24 months. Scheduled expiries point to rising quota through 2027 to 2028. Only two cycles, so turning points are not validated as forecasts.
 - No admitted condition is firing now. The dashboard will show base rates, the quota calendar and the state of each predictor, and say so when nothing is active.
 - Base rates over the last ten years: after three months the Category A premium was higher 63% of the time and rose more than 5% in 45% of windows; after six months the median change was +6.5%. These carry a decade of rising premiums.
+
+## First findings (property)
+
+- Quarterly URA series to 2026 Q2; all price indices are at or near their peaks (landed +7.0% year on year, condo +1.8%).
+- A causal walk-forward over nine registered predictor families finds nothing that beats the base rate in the latest decade (lift 0.64 since 2017). Price momentum scored 3.6 up to 2016 (the 2008 to 2010 swings) and 0.7 since.
+- The last decade was almost one-way up, so the long view carries the risk: non-landed prices fell 47% (1981 to 1986), 42% (1996 to 1998), 26% (2008 to 2009) and 10% (2013 to 2017). Details in `research/PROPERTY_RESULTS.md`.
 
 ## Layout
 
