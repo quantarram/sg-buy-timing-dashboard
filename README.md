@@ -2,6 +2,8 @@
 
 A research dashboard for deciding **when** to buy a car and a home in Singapore, built on the conditional-probability-of-exceedance (CPE) framework of [quant-regime-research](https://github.com/quantarram/quant-regime-research) and in the style of its sister dashboards: public data only, mechanisms registered before any result, thresholds frozen on a formation window, scored forward on a ledger.
 
+**Live dashboard: https://quantarram.github.io/sg-buy-timing-dashboard/** (rebuilt daily; the figures change when new data are published).
+
 It is a general, public research tool with nothing personalised in it, and it is not financial advice.
 
 ## Scope
