@@ -128,12 +128,20 @@ legend = "".join(f'<div>{pill(t, k)}</div><div>{d}</div>' for t, k, d in (
     ("MIXED SIGNALS", "warn", "Active conditions point in opposite directions.")))
 asof = f'Latest bidding exercise: round {cards["A"]["rnd"]} of {cards["A"]["month"]} &middot; monthly series to {Q["A"].index[-1].strftime("%b %Y")} &middot; built {now.strftime("%d %b %Y %H:%M")} SGT'
 quota_cut_12 = WF.loc["ALL admitted", "lift"]
+# ---- ledger state and track record --------------------------------------------------------------------------------------------------------------
+import track_section
+os.makedirs(os.path.join(ROOT, "data", "ledger"), exist_ok=True)
+state_out = {"COE A": [dict(family=r["fam"], tau=r["tau"], tail=r["tail"], implied=r["implied"]) for r in active["A"]], "COE B": [dict(family=r["fam"], tau=r["tau"], tail=r["tail"], implied=r["implied"]) for r in active["B"]]}
+for a_ in PROP["PROP_ACTIVE_LIST"]: state_out.setdefault(a_["scope"], []).append(dict(family=a_["family"], tau=a_["tau"], tail=a_["tail"], implied=a_["implied"]))
+json.dump({"built": now.strftime("%Y-%m-%d %H:%M SGT"), "active": state_out}, open(os.path.join(ROOT, "data", "ledger", "today_state.json"), "w"), indent=1)
+TRACK = track_section.build()
 html = open(os.path.join(ROOT, "pipelines", "template.html"), encoding="utf-8").read()
 rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{BADGES}}": badges, "{{LEGEND}}": legend, "{{CARD_A}}": card("A"), "{{CARD_B}}": card("B"), "{{STATE_A}}": state_table("A"), "{{STATE_B}}": state_table("B"), "{{BASE}}": base_table(),
        "{{LONG}}": json.dumps(long_traces), "{{RECENT}}": json.dumps(recent), "{{CYCLE}}": json.dumps(cycle_traces),
        "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}",
        "{{ENTRIES}}": f'{int(WF.loc["ALL admitted", "entries"]):,}'}
 for k_, v_ in PROP.items(): rep["{{" + k_ + "}}"] = str(v_)
+for k_, v_ in TRACK.items(): rep["{{" + k_ + "}}"] = str(v_)
 for k, v in rep.items(): html = html.replace(k, v)
 os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True); open(os.path.join(ROOT, "docs", "index.html"), "w", encoding="utf-8").write(html)
 open(os.path.join(ROOT, "docs", ".nojekyll"), "w").close()

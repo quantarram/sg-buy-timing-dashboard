@@ -123,6 +123,13 @@ a{color:var(--gold)}
 <h2>What the property evidence supports</h2>
 {{PROP_EVIDENCE}}
 
+<h2>Track record: is the dashboard right?</h2>
+<p class="tag">Two checks. A forward ledger, scored as outcomes arrive, and a causal replay of the base rates over the past (each forecast uses only windows already finished at the time).</p>
+<div class="grid"><section class="block"><h3>Live ledger</h3>{{TRACK_STATUS}}</section><section class="block"><h3>Scored outcomes</h3>{{TRACK_RECENT}}</section></div>
+<div class="block" style="margin-top:14px"><h3>What the ledger currently says (logged before the outcomes are known)</h3>{{TRACK_NOW}}</div>
+<div class="block" style="margin-top:14px"><h3>Replay of the base-rate forecasts over the past</h3><p class="tag">The forecast for each anchor is the share of the last ten years&rsquo; windows (and, separately, of all earlier windows) in which the series was higher after the horizon. {{TRACK_RETRO_NOTE}}</p>{{TRACK_RETRO}}</div>
+<div class="block" style="margin-top:14px"><h3>COE walk-forward lift by test year (1.0 = no better than the base rate)</h3><div id="tk1" class="chart"></div></div>
+
 <footer>Research, not financial advice. A "wait and watch" verdict means no measured timing edge; it is not a recommendation to delay a purchase you need. Data: Land Transport Authority, Singapore Department of Statistics and the Monetary Authority of Singapore via data.gov.sg (Singapore Open Data Licence). The page is rebuilt every day, but the figures only change when new data are published: COE results twice a month, vehicle statistics and interest rates monthly, property indices quarterly. Method and code: the <a href="https://github.com/quantarram/sg-buy-timing-dashboard">repository</a> and the <a href="https://github.com/quantarram/quant-regime-research">CPE framework</a>.</footer>
 </div>
 <script>
@@ -132,6 +139,7 @@ const cfg={responsive:true,displaylogo:false};
 Plotly.newPlot('long',{{LONG}},lay('S$ thousand'),cfg);
 Plotly.newPlot('recent',{{RECENT}},lay('S$ thousand'),cfg);
 Plotly.newPlot('cycle',{{CYCLE}},lay('vehicles per month'),cfg);
+Plotly.newPlot('tk1',{{TRACK_C1}},lay('lift',{hovermode:'closest',shapes:[{type:'line',xref:'paper',x0:0,x1:1,y0:1,y1:1,line:{color:'#DDE8DD',width:1,dash:'dot'}}]}),cfg);
 Plotly.newPlot('pp1',{{PROP_C1}},lay('index (2009 Q1 = 100)'),cfg);
 Plotly.newPlot('pp2',{{PROP_C2}},lay('index (2009 Q1 = 100)'),cfg);
 Plotly.newPlot('pp4',{{PROP_C4}},lay('S$ per sq ft',{hovermode:'x unified'}),cfg);

@@ -29,7 +29,7 @@ def pill(txt, tone): return f'<span class="pill tone-{tone}">{txt}</span>'
 def build(sup):
     P, R, T, N, S, gov = pr.load()
     rows, ex = ps.indicators(P, R, T, N, S); base = ps.base_rates(P); dd = {t: ps.drawdowns(P[t]) for t in ("nonlanded", "landed")}
-    n_active = 0; out = {}
+    n_active = 0; out = {}; actives = []
     # ---- cards
     cards = []
     for r in rows:
@@ -44,13 +44,14 @@ def build(sup):
         for fam, tau in REP:
             xs = X[(fam, tau)].dropna(); v = xs.iloc[-1]; pct = float((xs.iloc[:-1] < v).mean() * 100); tail = "low" if pct <= 20 else ("high" if pct >= 80 else "")
             sp = supported(sup, fam); active = sp and bool(tail)
-            if active: n_active += 1
+            if active:
+                n_active += 1; actives.append(dict(scope=ps.NAMES[tgt] if tgt != 'nonlanded' else 'Condo (non-landed)', family=fam, tau=tau, tail=tail, implied=('higher' if (sign[fam] > 0) == (tail == 'high') else 'lower')))
             read = pill("active", "warn") if active else (pill("tail, not supported", "note") if tail else pill("normal range", "neutral"))
             ev = f'{sup.loc[fam, "lift_all"]:.2f} ({int(sup.loc[fam, "entries_all"])} entries), {sup.loc[fam, "lift_2017"]:.2f}' if fam in sup.index else "not scored"
             lab = LABEL[fam] + (f" ({tau} quarters)" if tau else "")
             t.append(f'<tr><td>{lab}</td><td class="num">{pct:.0f}</td><td>{read}</td><td>{ev}</td></tr>')
         t.append("</tbody></table>"); out[key] = "".join(t)
-    out["PROP_ACTIVE"] = n_active
+    out["PROP_ACTIVE"] = n_active; out["PROP_ACTIVE_LIST"] = actives
     # ---- base rates
     b = ['<table><thead><tr><th>Segment</th><th>Window</th><th>Lower after 4q</th><th>Median 4q</th><th>Lower after 8q</th><th>Median 8q</th><th>Worst 4q</th></tr></thead><tbody>']
     for t_, d in base.items():

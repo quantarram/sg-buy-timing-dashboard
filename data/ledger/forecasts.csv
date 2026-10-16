@@ -1,0 +1,19 @@
+id,logged,scope,anchor,unit,horizon,p_10y,n_10y,p_all,anchor_value
+COE A|2026-09|3,2026-10-16,COE A,2026-09,month,3,0.6198,121,0.5552,132449.50
+COE A|2026-09|6,2026-10-16,COE A,2026-09,month,6,0.6612,121,0.5714,132449.50
+COE A|2026-09|12,2026-10-16,COE A,2026-09,month,12,0.6281,121,0.5338,132449.50
+COE B|2026-09|3,2026-10-16,COE B,2026-09,month,3,0.5868,121,0.5345,134000.50
+COE B|2026-09|6,2026-10-16,COE B,2026-09,month,6,0.6612,121,0.5679,134000.50
+COE B|2026-09|12,2026-10-16,COE B,2026-09,month,12,0.6364,121,0.5231,134000.50
+Condo (non-landed)|2026Q2|4,2026-10-16,Condo (non-landed),2026Q2,quarter,4,0.8293,41,0.6634,210.60
+Condo (non-landed)|2026Q2|8,2026-10-16,Condo (non-landed),2026Q2,quarter,8,0.8293,41,0.6869,210.60
+Landed|2026Q2|4,2026-10-16,Landed,2026Q2,quarter,4,0.7561,41,0.6832,258.40
+Landed|2026Q2|8,2026-10-16,Landed,2026Q2,quarter,8,0.8049,41,0.7071,258.40
+"Condo, core central|2026Q2|4",2026-10-16,"Condo, core central",2026Q2,quarter,4,0.6585,41,0.6628,161.50
+"Condo, core central|2026Q2|8",2026-10-16,"Condo, core central",2026Q2,quarter,8,0.7073,41,0.6585,161.50
+"Condo, rest of central|2026Q2|4",2026-10-16,"Condo, rest of central",2026Q2,quarter,4,0.7805,41,0.7326,226.20
+"Condo, rest of central|2026Q2|8",2026-10-16,"Condo, rest of central",2026Q2,quarter,8,0.8293,41,0.7561,226.20
+"Condo, outside central|2026Q2|4",2026-10-16,"Condo, outside central",2026Q2,quarter,4,0.8537,41,0.8023,271.10
+"Condo, outside central|2026Q2|8",2026-10-16,"Condo, outside central",2026Q2,quarter,8,0.8293,41,0.8659,271.10
+HDB resale index|2026Q2|4,2026-10-16,HDB resale index,2026Q2,quarter,4,0.6585,41,0.6831,202.80
+HDB resale index|2026Q2|8,2026-10-16,HDB resale index,2026Q2,quarter,8,0.6098,41,0.6667,202.80
