@@ -1,6 +1,7 @@
 name: daily
 # Rebuilds the page every day. The figures only change when new data are published:
-# COE results twice a month, vehicle statistics and interest rates monthly, property indices quarterly.
+# COE results twice a month, vehicle statistics and interest rates monthly, URA transactions on Tuesdays and Fridays, HDB resales as HDB publishes, property indices quarterly.
+# Every analysis the page reads is rerun here (COE, property and HDB-index walk-forwards), so the verdicts and evidence update with the data.
 on:
   schedule:
     - cron: "30 0 * * *"      # 00:30 UTC = 08:30 Singapore; scheduled runs often start a few hours late
@@ -29,13 +30,18 @@ jobs:
           python pipelines/fetch_property.py
           python pipelines/fetch_ura.py
           python pipelines/build_hdb.py
-      - name: Walk-forward and page
+      - name: Walk-forwards and page
         run: |
           python research/coe_cpe_walkforward.py
+          python research/property_cpe_walkforward.py
+          python research/hdb_rpi_cpe_walkforward.py
           python pipelines/build_site.py
+      - name: Worked example page
+        continue-on-error: true      # a failure here must not block the main page; it shows as a warning
+        run: python pipelines/build_example.py
       - name: Commit changes
         run: |
           git config user.name "dashboard-bot"
           git config user.email "dashboard-bot@users.noreply.github.com"
-          git add data docs research/coe_walkforward_summary.csv research/coe_walkforward_admitted.csv
+          git add data docs research/*.csv research/*.json
           if git diff --cached --quiet; then echo "nothing new"; else git commit -m "Daily update $(date -u +%F) [automated]" && git push; fi
