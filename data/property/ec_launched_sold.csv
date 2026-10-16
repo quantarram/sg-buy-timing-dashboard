@@ -1,0 +1,345 @@
+quarter,ec_launched_status,type_of_sale,units
+2008-Q1,Completed EC,New sale,25
+2008-Q1,EC 10 years or more from TOP,Resale,0
+2008-Q1,EC Launched,na,0
+2008-Q1,EC Less than 10 years from TOP,Resale,129
+2008-Q1,Uncompleted EC,New sale,20
+2008-Q2,Completed EC,New sale,5
+2008-Q2,EC 10 years or more from TOP,Resale,0
+2008-Q2,EC Launched,na,0
+2008-Q2,EC Less than 10 years from TOP,Resale,166
+2008-Q2,Uncompleted EC,New sale,0
+2008-Q3,Completed EC,New sale,0
+2008-Q3,EC 10 years or more from TOP,Resale,0
+2008-Q3,EC Launched,na,0
+2008-Q3,EC Less than 10 years from TOP,Resale,197
+2008-Q3,Uncompleted EC,New sale,0
+2008-Q4,Completed EC,New sale,0
+2008-Q4,EC 10 years or more from TOP,Resale,0
+2008-Q4,EC Launched,na,0
+2008-Q4,EC Less than 10 years from TOP,Resale,111
+2008-Q4,Uncompleted EC,New sale,0
+2009-Q1,Completed EC,New sale,0
+2009-Q1,EC 10 years or more from TOP,Resale,1
+2009-Q1,EC Launched,na,0
+2009-Q1,EC Less than 10 years from TOP,Resale,115
+2009-Q1,Uncompleted EC,New sale,0
+2009-Q2,Completed EC,New sale,0
+2009-Q2,EC 10 years or more from TOP,Resale,41
+2009-Q2,EC Launched,na,0
+2009-Q2,EC Less than 10 years from TOP,Resale,215
+2009-Q2,Uncompleted EC,New sale,0
+2009-Q3,Completed EC,New sale,0
+2009-Q3,EC 10 years or more from TOP,Resale,41
+2009-Q3,EC Launched,na,0
+2009-Q3,EC Less than 10 years from TOP,Resale,251
+2009-Q3,Uncompleted EC,New sale,0
+2009-Q4,Completed EC,New sale,0
+2009-Q4,EC 10 years or more from TOP,Resale,41
+2009-Q4,EC Launched,na,0
+2009-Q4,EC Less than 10 years from TOP,Resale,197
+2009-Q4,Uncompleted EC,New sale,0
+2010-Q1,Completed EC,New sale,0
+2010-Q1,EC 10 years or more from TOP,Resale,36
+2010-Q1,EC Launched,na,0
+2010-Q1,EC Less than 10 years from TOP,Resale,199
+2010-Q1,Uncompleted EC,New sale,0
+2010-Q2,Completed EC,New sale,0
+2010-Q2,EC 10 years or more from TOP,Resale,64
+2010-Q2,EC Launched,na,0
+2010-Q2,EC Less than 10 years from TOP,Resale,209
+2010-Q2,Uncompleted EC,New sale,0
+2010-Q3,Completed EC,New sale,0
+2010-Q3,EC 10 years or more from TOP,Resale,89
+2010-Q3,EC Launched,na,0
+2010-Q3,EC Less than 10 years from TOP,Resale,153
+2010-Q3,Uncompleted EC,New sale,0
+2010-Q4,Completed EC,New sale,0
+2010-Q4,EC 10 years or more from TOP,Resale,150
+2010-Q4,EC Launched,na,1659
+2010-Q4,EC Less than 10 years from TOP,Resale,89
+2010-Q4,Uncompleted EC,New sale,1052
+2011-Q1,Completed EC,New sale,0
+2011-Q1,EC 10 years or more from TOP,Resale,130
+2011-Q1,EC Launched,na,540
+2011-Q1,EC Less than 10 years from TOP,Resale,75
+2011-Q1,Uncompleted EC,New sale,608
+2011-Q2,Completed EC,New sale,0
+2011-Q2,EC 10 years or more from TOP,Resale,171
+2011-Q2,EC Launched,na,315
+2011-Q2,EC Less than 10 years from TOP,Resale,80
+2011-Q2,Uncompleted EC,New sale,569
+2011-Q3,Completed EC,New sale,0
+2011-Q3,EC 10 years or more from TOP,Resale,133
+2011-Q3,EC Launched,na,1680
+2011-Q3,EC Less than 10 years from TOP,Resale,54
+2011-Q3,Uncompleted EC,New sale,1274
+2011-Q4,Completed EC,New sale,0
+2011-Q4,EC 10 years or more from TOP,Resale,125
+2011-Q4,EC Launched,na,0
+2011-Q4,EC Less than 10 years from TOP,Resale,78
+2011-Q4,Uncompleted EC,New sale,432
+2012-Q1,Completed EC,New sale,0
+2012-Q1,EC 10 years or more from TOP,Resale,72
+2012-Q1,EC Launched,na,1864
+2012-Q1,EC Less than 10 years from TOP,Resale,86
+2012-Q1,Uncompleted EC,New sale,1557
+2012-Q2,Completed EC,New sale,0
+2012-Q2,EC 10 years or more from TOP,Resale,140
+2012-Q2,EC Launched,na,1081
+2012-Q2,EC Less than 10 years from TOP,Resale,100
+2012-Q2,Uncompleted EC,New sale,869
+2012-Q3,Completed EC,New sale,0
+2012-Q3,EC 10 years or more from TOP,Resale,140
+2012-Q3,EC Launched,na,0
+2012-Q3,EC Less than 10 years from TOP,Resale,82
+2012-Q3,Uncompleted EC,New sale,391
+2012-Q4,Completed EC,New sale,0
+2012-Q4,EC 10 years or more from TOP,Resale,130
+2012-Q4,EC Launched,na,1991
+2012-Q4,EC Less than 10 years from TOP,Resale,57
+2012-Q4,Uncompleted EC,New sale,1682
+2013-Q1,Completed EC,New sale,0
+2013-Q1,EC 10 years or more from TOP,Resale,62
+2013-Q1,EC Launched,na,0
+2013-Q1,EC Less than 10 years from TOP,Resale,61
+2013-Q1,Uncompleted EC,New sale,725
+2013-Q2,Completed EC,New sale,0
+2013-Q2,EC 10 years or more from TOP,Resale,67
+2013-Q2,EC Launched,na,1071
+2013-Q2,EC Less than 10 years from TOP,Resale,105
+2013-Q2,Uncompleted EC,New sale,932
+2013-Q3,Completed EC,New sale,2
+2013-Q3,EC 10 years or more from TOP,Resale,63
+2013-Q3,EC Launched,na,1387
+2013-Q3,EC Less than 10 years from TOP,Resale,60
+2013-Q3,Uncompleted EC,New sale,1238
+2013-Q4,Completed EC,New sale,1
+2013-Q4,EC 10 years or more from TOP,Resale,58
+2013-Q4,EC Launched,na,879
+2013-Q4,EC Less than 10 years from TOP,Resale,42
+2013-Q4,Uncompleted EC,New sale,690
+2014-Q1,Completed EC,New sale,1
+2014-Q1,EC 10 years or more from TOP,Resale,38
+2014-Q1,EC Launched,na,0
+2014-Q1,EC Less than 10 years from TOP,Resale,25
+2014-Q1,Uncompleted EC,New sale,148
+2014-Q2,Completed EC,New sale,1
+2014-Q2,EC 10 years or more from TOP,Resale,50
+2014-Q2,EC Launched,na,0
+2014-Q2,EC Less than 10 years from TOP,Resale,23
+2014-Q2,Uncompleted EC,New sale,153
+2014-Q3,Completed EC,New sale,0
+2014-Q3,EC 10 years or more from TOP,Resale,40
+2014-Q3,EC Launched,na,0
+2014-Q3,EC Less than 10 years from TOP,Resale,19
+2014-Q3,Uncompleted EC,New sale,162
+2014-Q4,Completed EC,New sale,0
+2014-Q4,EC 10 years or more from TOP,Resale,44
+2014-Q4,EC Launched,na,2505
+2014-Q4,EC Less than 10 years from TOP,Resale,17
+2014-Q4,Uncompleted EC,New sale,1113
+2015-Q1,Completed EC,New sale,8
+2015-Q1,EC 10 years or more from TOP,Resale,49
+2015-Q1,EC Launched,na,378
+2015-Q1,EC Less than 10 years from TOP,Resale,12
+2015-Q1,Uncompleted EC,New sale,318
+2015-Q2,Completed EC,New sale,5
+2015-Q2,EC 10 years or more from TOP,Resale,72
+2015-Q2,EC Launched,na,480
+2015-Q2,EC Less than 10 years from TOP,Resale,29
+2015-Q2,Uncompleted EC,New sale,434
+2015-Q3,Completed EC,New sale,0
+2015-Q3,EC 10 years or more from TOP,Resale,81
+2015-Q3,EC Launched,na,2387
+2015-Q3,EC Less than 10 years from TOP,Resale,14
+2015-Q3,Uncompleted EC,New sale,1212
+2015-Q4,Completed EC,New sale,3
+2015-Q4,EC 10 years or more from TOP,Resale,62
+2015-Q4,EC Launched,na,505
+2015-Q4,EC Less than 10 years from TOP,Resale,11
+2015-Q4,Uncompleted EC,New sale,570
+2016-Q1,Completed EC,New sale,11
+2016-Q1,EC 10 years or more from TOP,Resale,50
+2016-Q1,EC Launched,na,534
+2016-Q1,EC Less than 10 years from TOP,Resale,10
+2016-Q1,Uncompleted EC,New sale,751
+2016-Q2,Completed EC,New sale,15
+2016-Q2,EC 10 years or more from TOP,Resale,78
+2016-Q2,EC Launched,na,1260
+2016-Q2,EC Less than 10 years from TOP,Resale,10
+2016-Q2,Uncompleted EC,New sale,1090
+2016-Q3,Completed EC,New sale,16
+2016-Q3,EC 10 years or more from TOP,Resale,95
+2016-Q3,EC Launched,na,862
+2016-Q3,EC Less than 10 years from TOP,Resale,8
+2016-Q3,Uncompleted EC,New sale,1382
+2016-Q4,Completed EC,New sale,7
+2016-Q4,EC 10 years or more from TOP,Resale,54
+2016-Q4,EC Launched,na,93
+2016-Q4,EC Less than 10 years from TOP,Resale,7
+2016-Q4,Uncompleted EC,New sale,727
+2017-Q1,Completed EC,New sale,54
+2017-Q1,EC 10 years or more from TOP,Resale,70
+2017-Q1,EC Launched,na,1024
+2017-Q1,EC Less than 10 years from TOP,Resale,6
+2017-Q1,Uncompleted EC,New sale,1018
+2017-Q2,Completed EC,New sale,94
+2017-Q2,EC 10 years or more from TOP,Resale,93
+2017-Q2,EC Launched,na,0
+2017-Q2,EC Less than 10 years from TOP,Resale,12
+2017-Q2,Uncompleted EC,New sale,860
+2017-Q3,Completed EC,New sale,124
+2017-Q3,EC 10 years or more from TOP,Resale,91
+2017-Q3,EC Launched,na,531
+2017-Q3,EC Less than 10 years from TOP,Resale,15
+2017-Q3,Uncompleted EC,New sale,1415
+2017-Q4,Completed EC,New sale,104
+2017-Q4,EC 10 years or more from TOP,Resale,123
+2017-Q4,EC Launched,na,0
+2017-Q4,EC Less than 10 years from TOP,Resale,14
+2017-Q4,Uncompleted EC,New sale,342
+2018-Q1,Completed EC,New sale,186
+2018-Q1,EC 10 years or more from TOP,Resale,131
+2018-Q1,EC Launched,na,0
+2018-Q1,EC Less than 10 years from TOP,Resale,20
+2018-Q1,Uncompleted EC,New sale,75
+2018-Q2,Completed EC,New sale,89
+2018-Q2,EC 10 years or more from TOP,Resale,159
+2018-Q2,EC Launched,na,628
+2018-Q2,EC Less than 10 years from TOP,Resale,21
+2018-Q2,Uncompleted EC,New sale,673
+2018-Q3,Completed EC,New sale,35
+2018-Q3,EC 10 years or more from TOP,Resale,86
+2018-Q3,EC Launched,na,0
+2018-Q3,EC Less than 10 years from TOP,Resale,102
+2018-Q3,Uncompleted EC,New sale,49
+2018-Q4,Completed EC,New sale,4
+2018-Q4,EC 10 years or more from TOP,Resale,56
+2018-Q4,EC Launched,na,0
+2018-Q4,EC Less than 10 years from TOP,Resale,94
+2018-Q4,Uncompleted EC,New sale,25
+2019-Q1,Completed EC,New sale,9
+2019-Q1,EC 10 years or more from TOP,Resale,48
+2019-Q1,EC Launched,na,0
+2019-Q1,EC Less than 10 years from TOP,Resale,61
+2019-Q1,Uncompleted EC,New sale,1
+2019-Q2,Completed EC,New sale,2
+2019-Q2,EC 10 years or more from TOP,Resale,93
+2019-Q2,EC Launched,na,0
+2019-Q2,EC Less than 10 years from TOP,Resale,115
+2019-Q2,Uncompleted EC,New sale,8
+2019-Q3,Completed EC,New sale,1
+2019-Q3,EC 10 years or more from TOP,Resale,94
+2019-Q3,EC Launched,na,820
+2019-Q3,EC Less than 10 years from TOP,Resale,146
+2019-Q3,Uncompleted EC,New sale,425
+2019-Q4,Completed EC,New sale,1
+2019-Q4,EC 10 years or more from TOP,Resale,82
+2019-Q4,EC Launched,na,0
+2019-Q4,EC Less than 10 years from TOP,Resale,130
+2019-Q4,Uncompleted EC,New sale,58
+2020-Q1,EC 10 years or more from TOP,Resale,61
+2020-Q1,EC Launched,na,1044
+2020-Q1,EC Less than 10 years from TOP,Resale,123
+2020-Q1,Uncompleted EC,New sale,590
+2020-Q2,EC 10 years or more from TOP,Resale,34
+2020-Q2,EC Launched,na,0
+2020-Q2,EC Less than 10 years from TOP,Resale,97
+2020-Q2,Uncompleted EC,New sale,71
+2020-Q3,EC 10 years or more from TOP,Resale,117
+2020-Q3,EC Launched,na,0
+2020-Q3,EC Less than 10 years from TOP,Resale,323
+2020-Q3,Uncompleted EC,New sale,164
+2020-Q4,EC 10 years or more from TOP,Resale,158
+2020-Q4,EC Launched,na,0
+2020-Q4,EC Less than 10 years from TOP,Resale,337
+2020-Q4,Uncompleted EC,New sale,133
+2021-Q1,EC 10 years or more from TOP,Resale,139
+2021-Q1,EC Launched,na,700
+2021-Q1,EC Less than 10 years from TOP,Resale,381
+2021-Q1,Uncompleted EC,New sale,647
+2021-Q2,EC 10 years or more from TOP,Resale,145
+2021-Q2,EC Launched,na,413
+2021-Q2,EC Less than 10 years from TOP,Resale,462
+2021-Q2,Uncompleted EC,New sale,495
+2021-Q3,EC 10 years or more from TOP,Resale,156
+2021-Q3,EC Launched,na,496
+2021-Q3,EC Less than 10 years from TOP,Resale,489
+2021-Q3,Uncompleted EC,New sale,717
+2021-Q4,EC 10 years or more from TOP,Resale,117
+2021-Q4,EC Launched,na,0
+2021-Q4,EC Less than 10 years from TOP,Resale,437
+2021-Q4,Uncompleted EC,New sale,260
+2022-Q1,EC 10 years or more from TOP,Resale,91
+2022-Q1,EC Launched,na,0
+2022-Q1,EC Less than 10 years from TOP,Resale,316
+2022-Q1,Uncompleted EC,New sale,131
+2022-Q2,EC 10 years or more from TOP,Resale,124
+2022-Q2,EC Launched,na,616
+2022-Q2,EC Less than 10 years from TOP,Resale,524
+2022-Q2,Uncompleted EC,New sale,193
+2022-Q3,EC 10 years or more from TOP,Resale,95
+2022-Q3,EC Launched,na,0
+2022-Q3,EC Less than 10 years from TOP,Resale,464
+2022-Q3,Uncompleted EC,New sale,28
+2022-Q4,EC 10 years or more from TOP,Resale,93
+2022-Q4,EC Launched,na,1257
+2022-Q4,EC Less than 10 years from TOP,Resale,359
+2022-Q4,Uncompleted EC,New sale,1127
+2023-Q1,EC 10 years or more from TOP,Resale,58
+2023-Q1,EC Launched,na,0
+2023-Q1,EC Less than 10 years from TOP,Resale,264
+2023-Q1,Uncompleted EC,New sale,206
+2023-Q2,EC 10 years or more from TOP,Resale,89
+2023-Q2,EC Launched,na,0
+2023-Q2,EC Less than 10 years from TOP,Resale,451
+2023-Q2,Uncompleted EC,New sale,56
+2023-Q3,EC 10 years or more from TOP,Resale,82
+2023-Q3,EC Launched,na,360
+2023-Q3,EC Less than 10 years from TOP,Resale,445
+2023-Q3,Uncompleted EC,New sale,420
+2023-Q4,EC 10 years or more from TOP,Resale,108
+2023-Q4,EC Launched,na,0
+2023-Q4,EC Less than 10 years from TOP,Resale,413
+2023-Q4,Uncompleted EC,New sale,52
+2024-Q1,EC 10 years or more from TOP,Resale,89
+2024-Q1,EC Launched,na,512
+2024-Q1,EC Less than 10 years from TOP,Resale,336
+2024-Q1,Uncompleted EC,New sale,449
+2024-Q2,EC 10 years or more from TOP,Resale,135
+2024-Q2,EC Launched,na,0
+2024-Q2,EC Less than 10 years from TOP,Resale,444
+2024-Q2,Uncompleted EC,New sale,145
+2024-Q3,EC 10 years or more from TOP,Resale,151
+2024-Q3,EC Launched,na,0
+2024-Q3,EC Less than 10 years from TOP,Resale,401
+2024-Q3,Uncompleted EC,New sale,100
+2024-Q4,EC 10 years or more from TOP,Resale,169
+2024-Q4,EC Launched,na,504
+2024-Q4,EC Less than 10 years from TOP,Resale,337
+2024-Q4,Uncompleted EC,New sale,526
+2025-Q1,EC 10 years or more from TOP,Resale,0
+2025-Q1,EC Launched,na,760
+2025-Q1,EC Less than 10 years from TOP,Resale,0
+2025-Q1,Uncompleted EC,New sale,829
+2025-Q2,EC 10 years or more from TOP,Resale,0
+2025-Q2,EC Launched,na,0
+2025-Q2,EC Less than 10 years from TOP,Resale,0
+2025-Q2,Uncompleted EC,New sale,147
+2025-Q3,EC 10 years or more from TOP,Resale,0
+2025-Q3,EC Launched,na,600
+2025-Q3,EC Less than 10 years from TOP,Resale,0
+2025-Q3,Uncompleted EC,New sale,568
+2025-Q4,EC 10 years or more from TOP,Resale,0
+2025-Q4,EC Launched,na,0
+2025-Q4,EC Less than 10 years from TOP,Resale,0
+2025-Q4,Uncompleted EC,New sale,79
+2026-Q1,EC 10 years or more from TOP,Resale,0
+2026-Q1,EC Launched,na,1320
+2026-Q1,EC Less than 10 years from TOP,Resale,0
+2026-Q1,Uncompleted EC,New sale,1163
+2026-Q2,EC 10 years or more from TOP,Resale,0
+2026-Q2,EC Launched,na,0
+2026-Q2,EC Less than 10 years from TOP,Resale,0
+2026-Q2,Uncompleted EC,New sale,169

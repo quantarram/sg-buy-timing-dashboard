@@ -11,16 +11,20 @@ It is a general, public research tool with nothing personalised in it, and it is
 | Phase | What | Status |
 |---|---|---|
 | 1 | Cars: COE premium, Category A and B (monthly series from 2002) | data layer and causal walk-forward done; one modest supply effect, nothing firing now |
-| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | not started |
+| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | public data layer done (quarterly series to Q2 2026); EC prices need a URA key; CPE analysis not started |
 | 3 | Dashboard: one public panel for any Singapore buyer (general conditions and probabilities, nothing personalised) | not started |
 
 ## Data (public)
 
 - **COE results**: LTA via data.gov.sg (Open Data Licence, no key). Per-exercise results from 2010 (`data/coe_results.csv`, `pipelines/fetch_coe.py`; bids received missing for 109 of 1,985 rows) and monthly series from 2002 with bids, quota and premium (`pipelines/fetch_monthly.py`).
 - **Vehicle flows and rates**: monthly new registrations and de-registrations by category, and government bond yields and SORA (MAS), all on data.gov.sg.
-- **Private residential price index**: URA via data.gov.sg, quarterly from 1975 (landed and non-landed), non-landed by region from 2004. Not yet fetched.
-- **Mortgage rates**: MAS compounded SORA, daily. Not yet fetched.
-- **Transactions**: the URA Data Service API needs a free registration and access key. Source for executive condominiums not yet checked.
+- **Property (URA and related, quarterly, to 2026 Q2)**, fetched by `pipelines/fetch_property.py` into `data/property/` and parsed by `sgtiming/property_panel.py`:
+  - prices: private residential price index (all, landed, non-landed; from 1975) and non-landed by region (core central, rest of central, outside central; from 2004);
+  - rents: private residential rental index (from 1990; non-landed by region from 2004);
+  - activity: units transacted (new sale, resale, sub sale; whole island from 1999 and by region from 2004), uncompleted units launched and sold by region, completed units sold;
+  - supply: pipeline by status (landed and non-landed, from 1993), available and vacant stock (from 1988), unsold approved units (from 2006);
+  - executive condominiums: launches, new and resale sales, sale position, available, vacant and pipeline (from 2008 to 2010); **no EC price series is on data.gov.sg**, so EC prices need the URA Data Service API, which needs a free access key.
+- **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
 ## First findings (COE)
 
@@ -35,7 +39,7 @@ Monthly series from 2002 (296 months), old Category A and B, eight registered pr
 ## Layout
 
 ```
-sgtiming/        data layer (fetching, parsing, monthly panel)
+sgtiming/        data layer (fetching, parsing, monthly COE panel, quarterly property panel)
 research/        CPE walk-forward, drill-downs, results
 pipelines/       scripts that refresh the data
 data/            committed raw public data

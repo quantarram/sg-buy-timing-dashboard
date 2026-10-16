@@ -1,0 +1,361 @@
+quarter,type_of_sale,sale_status,units
+2004-Q1,New Sale,Completed,98
+2004-Q1,New Sale,Uncompleted,160
+2004-Q1,Resale,na,310
+2004-Q1,Sub Sale,na,10
+2004-Q2,New Sale,Completed,143
+2004-Q2,New Sale,Uncompleted,151
+2004-Q2,Resale,na,314
+2004-Q2,Sub Sale,na,21
+2004-Q3,New Sale,Completed,88
+2004-Q3,New Sale,Uncompleted,147
+2004-Q3,Resale,na,386
+2004-Q3,Sub Sale,na,13
+2004-Q4,New Sale,Completed,77
+2004-Q4,New Sale,Uncompleted,945
+2004-Q4,Resale,na,382
+2004-Q4,Sub Sale,na,14
+2005-Q1,New Sale,Completed,84
+2005-Q1,New Sale,Uncompleted,596
+2005-Q1,Resale,na,356
+2005-Q1,Sub Sale,na,29
+2005-Q2,New Sale,Completed,98
+2005-Q2,New Sale,Uncompleted,717
+2005-Q2,Resale,na,441
+2005-Q2,Sub Sale,na,38
+2005-Q3,New Sale,Completed,109
+2005-Q3,New Sale,Uncompleted,779
+2005-Q3,Resale,na,669
+2005-Q3,Sub Sale,na,48
+2005-Q4,New Sale,Completed,168
+2005-Q4,New Sale,Uncompleted,1134
+2005-Q4,Resale,na,766
+2005-Q4,Sub Sale,na,115
+2006-Q1,New Sale,Completed,43
+2006-Q1,New Sale,Uncompleted,385
+2006-Q1,Resale,na,774
+2006-Q1,Sub Sale,na,53
+2006-Q2,New Sale,Completed,59
+2006-Q2,New Sale,Uncompleted,691
+2006-Q2,Resale,na,960
+2006-Q2,Sub Sale,na,77
+2006-Q3,New Sale,Completed,36
+2006-Q3,New Sale,Uncompleted,1124
+2006-Q3,Resale,na,796
+2006-Q3,Sub Sale,na,232
+2006-Q4,New Sale,Completed,37
+2006-Q4,New Sale,Uncompleted,1757
+2006-Q4,Resale,na,1114
+2006-Q4,Sub Sale,na,401
+2007-Q1,New Sale,Completed,18
+2007-Q1,New Sale,Uncompleted,2055
+2007-Q1,Resale,na,1214
+2007-Q1,Sub Sale,na,475
+2007-Q2,New Sale,Completed,63
+2007-Q2,New Sale,Uncompleted,1196
+2007-Q2,Resale,na,1816
+2007-Q2,Sub Sale,na,1039
+2007-Q3,New Sale,Completed,58
+2007-Q3,New Sale,Uncompleted,1123
+2007-Q3,Resale,na,1010
+2007-Q3,Sub Sale,na,747
+2007-Q4,New Sale,Completed,23
+2007-Q4,New Sale,Uncompleted,418
+2007-Q4,Resale,na,553
+2007-Q4,Sub Sale,na,274
+2008-Q1,New Sale,Completed,4
+2008-Q1,New Sale,Uncompleted,219
+2008-Q1,Resale,na,350
+2008-Q1,Sub Sale,na,158
+2008-Q2,New Sale,Completed,10
+2008-Q2,New Sale,Uncompleted,343
+2008-Q2,Resale,na,287
+2008-Q2,Sub Sale,na,203
+2008-Q3,New Sale,Completed,41
+2008-Q3,New Sale,Uncompleted,210
+2008-Q3,Resale,na,355
+2008-Q3,Sub Sale,na,198
+2008-Q4,New Sale,Completed,5
+2008-Q4,New Sale,Uncompleted,133
+2008-Q4,Resale,na,133
+2008-Q4,Sub Sale,na,81
+2009-Q1,New Sale,Completed,21
+2009-Q1,New Sale,Uncompleted,222
+2009-Q1,Resale,na,160
+2009-Q1,Sub Sale,na,124
+2009-Q2,New Sale,Completed,67
+2009-Q2,New Sale,Uncompleted,1386
+2009-Q2,Resale,na,872
+2009-Q2,Sub Sale,na,600
+2009-Q3,New Sale,Completed,38
+2009-Q3,New Sale,Uncompleted,1148
+2009-Q3,Resale,na,1118
+2009-Q3,Sub Sale,na,502
+2009-Q4,New Sale,Completed,12
+2009-Q4,New Sale,Uncompleted,852
+2009-Q4,Resale,na,765
+2009-Q4,Sub Sale,na,294
+2010-Q1,New Sale,Completed,13
+2010-Q1,New Sale,Uncompleted,1914
+2010-Q1,Resale,na,949
+2010-Q1,Sub Sale,na,390
+2010-Q2,New Sale,Completed,27
+2010-Q2,New Sale,Uncompleted,672
+2010-Q2,Resale,na,962
+2010-Q2,Sub Sale,na,313
+2010-Q3,New Sale,Completed,32
+2010-Q3,New Sale,Uncompleted,484
+2010-Q3,Resale,na,825
+2010-Q3,Sub Sale,na,260
+2010-Q4,New Sale,Completed,118
+2010-Q4,New Sale,Uncompleted,876
+2010-Q4,Resale,na,806
+2010-Q4,Sub Sale,na,214
+2011-Q1,New Sale,Completed,45
+2011-Q1,New Sale,Uncompleted,536
+2011-Q1,Resale,na,604
+2011-Q1,Sub Sale,na,173
+2011-Q2,New Sale,Completed,52
+2011-Q2,New Sale,Uncompleted,526
+2011-Q2,Resale,na,831
+2011-Q2,Sub Sale,na,221
+2011-Q3,New Sale,Completed,29
+2011-Q3,New Sale,Uncompleted,207
+2011-Q3,Resale,na,606
+2011-Q3,Sub Sale,na,169
+2011-Q4,New Sale,Completed,33
+2011-Q4,New Sale,Uncompleted,161
+2011-Q4,Resale,na,486
+2011-Q4,Sub Sale,na,153
+2012-Q1,New Sale,Completed,9
+2012-Q1,New Sale,Uncompleted,129
+2012-Q1,Resale,na,376
+2012-Q1,Sub Sale,na,77
+2012-Q2,New Sale,Completed,41
+2012-Q2,New Sale,Uncompleted,403
+2012-Q2,Resale,na,750
+2012-Q2,Sub Sale,na,121
+2012-Q3,New Sale,Completed,56
+2012-Q3,New Sale,Uncompleted,647
+2012-Q3,Resale,na,757
+2012-Q3,Sub Sale,na,118
+2012-Q4,New Sale,Completed,28
+2012-Q4,New Sale,Uncompleted,582
+2012-Q4,Resale,na,808
+2012-Q4,Sub Sale,na,126
+2013-Q1,New Sale,Completed,24
+2013-Q1,New Sale,Uncompleted,655
+2013-Q1,Resale,na,407
+2013-Q1,Sub Sale,na,80
+2013-Q2,New Sale,Completed,48
+2013-Q2,New Sale,Uncompleted,365
+2013-Q2,Resale,na,438
+2013-Q2,Sub Sale,na,48
+2013-Q3,New Sale,Completed,21
+2013-Q3,New Sale,Uncompleted,166
+2013-Q3,Resale,na,323
+2013-Q3,Sub Sale,na,33
+2013-Q4,New Sale,Completed,14
+2013-Q4,New Sale,Uncompleted,766
+2013-Q4,Resale,na,284
+2013-Q4,Sub Sale,na,23
+2014-Q1,New Sale,Completed,22
+2014-Q1,New Sale,Uncompleted,121
+2014-Q1,Resale,na,205
+2014-Q1,Sub Sale,na,13
+2014-Q2,New Sale,Completed,22
+2014-Q2,New Sale,Uncompleted,95
+2014-Q2,Resale,na,293
+2014-Q2,Sub Sale,na,31
+2014-Q3,New Sale,Completed,20
+2014-Q3,New Sale,Uncompleted,117
+2014-Q3,Resale,na,276
+2014-Q3,Sub Sale,na,22
+2014-Q4,New Sale,Completed,47
+2014-Q4,New Sale,Uncompleted,422
+2014-Q4,Resale,na,250
+2014-Q4,Sub Sale,na,20
+2015-Q1,New Sale,Completed,32
+2015-Q1,New Sale,Uncompleted,48
+2015-Q1,Resale,na,283
+2015-Q1,Sub Sale,na,13
+2015-Q2,New Sale,Completed,67
+2015-Q2,New Sale,Uncompleted,87
+2015-Q2,Resale,na,448
+2015-Q2,Sub Sale,na,25
+2015-Q3,New Sale,Completed,42
+2015-Q3,New Sale,Uncompleted,67
+2015-Q3,Resale,na,349
+2015-Q3,Sub Sale,na,10
+2015-Q4,New Sale,Completed,34
+2015-Q4,New Sale,Uncompleted,30
+2015-Q4,Resale,na,320
+2015-Q4,Sub Sale,na,4
+2016-Q1,New Sale,Completed,38
+2016-Q1,New Sale,Uncompleted,221
+2016-Q1,Resale,na,325
+2016-Q1,Sub Sale,na,0
+2016-Q2,New Sale,Completed,45
+2016-Q2,New Sale,Uncompleted,118
+2016-Q2,Resale,na,599
+2016-Q2,Sub Sale,na,5
+2016-Q3,New Sale,Completed,50
+2016-Q3,New Sale,Uncompleted,105
+2016-Q3,Resale,na,636
+2016-Q3,Sub Sale,na,3
+2016-Q4,New Sale,Completed,25
+2016-Q4,New Sale,Uncompleted,80
+2016-Q4,Resale,na,513
+2016-Q4,Sub Sale,na,1
+2017-Q1,New Sale,Completed,37
+2017-Q1,New Sale,Uncompleted,89
+2017-Q1,Resale,na,600
+2017-Q1,Sub Sale,na,3
+2017-Q2,New Sale,Completed,34
+2017-Q2,New Sale,Uncompleted,125
+2017-Q2,Resale,na,1009
+2017-Q2,Sub Sale,na,3
+2017-Q3,New Sale,Completed,32
+2017-Q3,New Sale,Uncompleted,337
+2017-Q3,Resale,na,1096
+2017-Q3,Sub Sale,na,5
+2017-Q4,New Sale,Completed,49
+2017-Q4,New Sale,Uncompleted,182
+2017-Q4,Resale,na,976
+2017-Q4,Sub Sale,na,8
+2018-Q1,New Sale,Completed,81
+2018-Q1,New Sale,Uncompleted,65
+2018-Q1,Resale,na,746
+2018-Q1,Sub Sale,na,9
+2018-Q2,New Sale,Completed,86
+2018-Q2,New Sale,Uncompleted,72
+2018-Q2,Resale,na,912
+2018-Q2,Sub Sale,na,10
+2018-Q3,New Sale,Completed,82
+2018-Q3,New Sale,Uncompleted,46
+2018-Q3,Resale,na,540
+2018-Q3,Sub Sale,na,7
+2018-Q4,New Sale,Completed,31
+2018-Q4,New Sale,Uncompleted,58
+2018-Q4,Resale,na,395
+2018-Q4,Sub Sale,na,6
+2019-Q1,New Sale,Completed,27
+2019-Q1,New Sale,Uncompleted,165
+2019-Q1,Resale,na,426
+2019-Q1,Sub Sale,na,7
+2019-Q2,New Sale,Completed,33
+2019-Q2,New Sale,Uncompleted,137
+2019-Q2,Resale,na,529
+2019-Q2,Sub Sale,na,3
+2019-Q3,New Sale,Completed,29
+2019-Q3,New Sale,Uncompleted,147
+2019-Q3,Resale,na,536
+2019-Q3,Sub Sale,na,0
+2019-Q4,New Sale,Completed,0
+2019-Q4,New Sale,Uncompleted,402
+2019-Q4,Resale,na,568
+2019-Q4,Sub Sale,na,1
+2020-Q1,New Sale,Completed,14
+2020-Q1,New Sale,Uncompleted,546
+2020-Q1,Resale,na,513
+2020-Q1,Sub Sale,na,0
+2020-Q2,New Sale,Completed,0
+2020-Q2,New Sale,Uncompleted,210
+2020-Q2,Resale,na,211
+2020-Q2,Sub Sale,na,1
+2020-Q3,New Sale,Completed,0
+2020-Q3,New Sale,Uncompleted,286
+2020-Q3,Resale,na,675
+2020-Q3,Sub Sale,na,0
+2020-Q4,New Sale,Completed,0
+2020-Q4,New Sale,Uncompleted,204
+2020-Q4,Resale,na,744
+2020-Q4,Sub Sale,na,2
+2021-Q1,New Sale,Completed,0
+2021-Q1,New Sale,Uncompleted,681
+2021-Q1,Resale,na,859
+2021-Q1,Sub Sale,na,6
+2021-Q2,New Sale,Completed,14
+2021-Q2,New Sale,Uncompleted,799
+2021-Q2,Resale,na,1109
+2021-Q2,Sub Sale,na,8
+2021-Q3,New Sale,Completed,20
+2021-Q3,New Sale,Uncompleted,423
+2021-Q3,Resale,na,1005
+2021-Q3,Sub Sale,na,2
+2021-Q4,New Sale,Completed,40
+2021-Q4,New Sale,Uncompleted,544
+2021-Q4,Resale,na,869
+2021-Q4,Sub Sale,na,6
+2022-Q1,New Sale,Completed,32
+2022-Q1,New Sale,Uncompleted,329
+2022-Q1,Resale,na,533
+2022-Q1,Sub Sale,na,7
+2022-Q2,New Sale,Completed,61
+2022-Q2,New Sale,Uncompleted,531
+2022-Q2,Resale,na,740
+2022-Q2,Sub Sale,na,4
+2022-Q3,New Sale,Completed,40
+2022-Q3,New Sale,Uncompleted,522
+2022-Q3,Resale,na,709
+2022-Q3,Sub Sale,na,9
+2022-Q4,New Sale,Completed,30
+2022-Q4,New Sale,Uncompleted,351
+2022-Q4,Resale,na,494
+2022-Q4,Sub Sale,na,8
+2023-Q1,New Sale,Completed,10
+2023-Q1,New Sale,Uncompleted,531
+2023-Q1,Resale,na,543
+2023-Q1,Sub Sale,na,7
+2023-Q2,New Sale,Completed,28
+2023-Q2,New Sale,Uncompleted,417
+2023-Q2,Resale,na,541
+2023-Q2,Sub Sale,na,9
+2023-Q3,New Sale,Completed,19
+2023-Q3,New Sale,Uncompleted,234
+2023-Q3,Resale,na,525
+2023-Q3,Sub Sale,na,10
+2023-Q4,New Sale,Completed,30
+2023-Q4,New Sale,Uncompleted,185
+2023-Q4,Resale,na,521
+2023-Q4,Sub Sale,na,8
+2024-Q1,New Sale,Completed,35
+2024-Q1,New Sale,Uncompleted,71
+2024-Q1,Resale,na,490
+2024-Q1,Sub Sale,na,9
+2024-Q2,New Sale,Completed,20
+2024-Q2,New Sale,Uncompleted,61
+2024-Q2,Resale,na,713
+2024-Q2,Sub Sale,na,21
+2024-Q3,New Sale,Completed,12
+2024-Q3,New Sale,Uncompleted,42
+2024-Q3,Resale,na,659
+2024-Q3,Sub Sale,na,11
+2024-Q4,New Sale,Completed,11
+2024-Q4,New Sale,Uncompleted,126
+2024-Q4,Resale,na,631
+2024-Q4,Sub Sale,na,17
+2025-Q1,New Sale,Completed,23
+2025-Q1,New Sale,Uncompleted,169
+2025-Q1,Resale,na,675
+2025-Q1,Sub Sale,na,34
+2025-Q2,New Sale,Completed,7
+2025-Q2,New Sale,Uncompleted,37
+2025-Q2,Resale,na,640
+2025-Q2,Sub Sale,na,15
+2025-Q3,New Sale,Completed,0
+2025-Q3,New Sale,Uncompleted,903
+2025-Q3,Resale,na,710
+2025-Q3,Sub Sale,na,27
+2025-Q4,New Sale,Completed,19
+2025-Q4,New Sale,Uncompleted,758
+2025-Q4,Resale,na,674
+2025-Q4,Sub Sale,na,24
+2026-Q1,New Sale,Completed,13
+2026-Q1,New Sale,Uncompleted,684
+2026-Q1,Resale,na,597
+2026-Q1,Sub Sale,na,19
+2026-Q2,New Sale,Completed,6
+2026-Q2,New Sale,Uncompleted,64
+2026-Q2,Resale,na,715
+2026-Q2,Sub Sale,na,19

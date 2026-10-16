@@ -24,6 +24,7 @@ jobs:
         run: |
           python pipelines/fetch_coe.py
           python pipelines/fetch_monthly.py
+          python pipelines/fetch_property.py
       - name: Walk-forward and page
         run: |
           python research/coe_cpe_walkforward.py

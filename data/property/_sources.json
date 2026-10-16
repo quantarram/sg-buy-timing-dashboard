@@ -1,0 +1,218 @@
+{
+ "ppi_all": {
+  "id": "d_97f8a2e995022d311c6c68cfda6d034c",
+  "name": "Private Residential Property Price Index (Base Quarter 2009-Q1 = 100), Quarterly",
+  "rows": 618,
+  "cols": 3,
+  "start": "1975-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "ppi_by_type": {
+  "id": "d_c0c26484c655113b0ab5abaa0a49952b",
+  "name": "Private Residential Property Price Index By Type Of Property, (Base Quarter 2009-Q1 = 100)",
+  "rows": 362,
+  "cols": 4,
+  "start": "1975-01-01",
+  "end": "2020-03-31",
+  "updated": "2024-06-06"
+ },
+ "ppi_by_type_b": {
+  "id": "d_da00b36ca8c831322fa0bb2a3378a476",
+  "name": "Private Residential Property Price Index By Type Of Property, (1st Quarter 2009 = 100), Quarterly",
+  "rows": 3,
+  "cols": 207,
+  "start": "1975-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "ppi_alt": {
+  "id": "d_f76411aa34d98559b6194419d796ce59",
+  "name": "Private Residential Property Price Index (Base Quarter 2009-Q1 = 100)",
+  "rows": 181,
+  "cols": 3,
+  "start": "1975-01-01",
+  "end": "2020-03-31",
+  "updated": "2024-06-06"
+ },
+ "ppi_nonlanded_locality": {
+  "id": "d_f65e490a8ad430f60a9a3d9df2bff2a0",
+  "name": "Property Price Index of Non-landed Properties by Locality, Quarterly",
+  "rows": 270,
+  "cols": 3,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "rent_index": {
+  "id": "d_8e4c50283fb7052a391dfb746a05c853",
+  "name": "Private Residential Property Rental Index , (Base Quarter 2009-Q1 = 100), Quarterly",
+  "rows": 520,
+  "cols": 4,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "rent_index_b": {
+  "id": "d_647dabde09e726b9eeb75e4d9cd96699",
+  "name": "Rental Index Of Residential Properties, (1st Quarter 2009 = 100), Quarterly",
+  "rows": 3,
+  "cols": 147,
+  "start": "1990-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "rent_nonlanded_locality": {
+  "id": "d_56b0c7f6538be69f24956634d88d82e8",
+  "name": "Rental Indices Of Non-Landed Private Residential Properties By Locality (1st Quarter 2009 = 100), Quarterly",
+  "rows": 3,
+  "cols": 91,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "txn_all": {
+  "id": "d_7c69c943d5f0d89d6a9a773d2b51f337",
+  "name": "Private Residential Property Transactions in the Whole of Singapore, Quarterly",
+  "rows": 428,
+  "cols": 4,
+  "start": "1999-10-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "txn_ccr": {
+  "id": "d_c287c8be114bfa7d055b27ab2c87de83",
+  "name": "Private Residential Property Transactions in Core Central Region, Quarterly",
+  "rows": 360,
+  "cols": 4,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "txn_rcr": {
+  "id": "d_5785799d63a9da091f4e0b456291eeb8",
+  "name": "Private Residential Property Transactions in Rest of Central Region, Quarterly",
+  "rows": 360,
+  "cols": 4,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "txn_ocr": {
+  "id": "d_1a7823f3d31e7db4b426833833762bab",
+  "name": "Private Residential Property Transactions in Outside Central Region, Quarterly",
+  "rows": 360,
+  "cols": 4,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "launched_uncompleted": {
+  "id": "d_70824d34defde87d88faccc5d5b1c6ea",
+  "name": "Uncompleted Private Residential Units Launched in the Quarter by Market Segment, Quarterly",
+  "rows": 270,
+  "cols": 3,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "sold_uncompleted": {
+  "id": "d_e1c5b0df62729e69c82716355ef295ba",
+  "name": "Uncompleted Private Residential Units Sold in the Quarter by Market Segment, Quarterly",
+  "rows": 270,
+  "cols": 4,
+  "start": "2004-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "sold_completed": {
+  "id": "d_a283de8cb3b4e80a228bf5f5e0bc4449",
+  "name": "Completed Private Residential Units Sold in the Quarter, Quarterly",
+  "rows": 107,
+  "cols": 3,
+  "start": "1999-10-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "ec_launched_sold": {
+  "id": "d_19c79027c2e6be3c39d637151bd2188d",
+  "name": "Executive Condominium Units Launched and Sold in the Quarter, Quarterly",
+  "rows": 344,
+  "cols": 4,
+  "start": "2008-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "supply_pipeline": {
+  "id": "d_baa848bbdbf4af7b4d709f147fcf3c9b",
+  "name": "Supply of Private Residential Properties in the Pipeline by Development Status, Quarterly",
+  "rows": 152,
+  "cols": 4,
+  "start": "2014-01-01",
+  "end": "2018-09-30",
+  "updated": "2024-06-06"
+ },
+ "supply_pipeline_b": {
+  "id": "d_055b6549444dedb341c50805d9682a41",
+  "name": "Supply Of Private Residential Properties In The Pipeline By Development Status (End Of Period), Quarterly",
+  "rows": 10,
+  "cols": 134,
+  "start": "1993-04-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "vacant": {
+  "id": "d_01e3556fb916ca19a7e29fc39520fa78",
+  "name": "Available And Vacant Private Residential Properties (End Of Period), Quarterly",
+  "rows": 6,
+  "cols": 155,
+  "start": "1988-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "unsold_approved": {
+  "id": "d_84d05d45049108f0fd2e99b66bd19cfe",
+  "name": "Unsold Private Residential Units with Planning Approvals by Market Segment, Quarterly",
+  "rows": 960,
+  "cols": 6,
+  "start": "2006-07-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "ec_vacant_pipeline": {
+  "id": "d_361d4f4313d30951c76beaa343fd7ce1",
+  "name": "Available And Vacant Executive Condominiums And Supply Of Executive Condominiums In The Pipeline By Development Status (End Of Period), Quarterly",
+  "rows": 7,
+  "cols": 65,
+  "start": "2010-07-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
+ },
+ "ec_pipeline": {
+  "id": "d_4e8073b6cf272998f14fd970a24c1639",
+  "name": "Supply of Executive Condominiums in the Pipeline by Development Status, Quarterly",
+  "rows": 72,
+  "cols": 3,
+  "start": "2014-04-01",
+  "end": "2018-09-30",
+  "updated": "2024-06-06"
+ },
+ "ec_sale_position": {
+  "id": "d_8b71bc3e1386261039d7ad95efdc3328",
+  "name": "Sale Position of Executive Condominiums with Pre-Requisites for Sale, Quarterly",
+  "rows": 642,
+  "cols": 4,
+  "start": "1999-10-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-27"
+ },
+ "housing_loans": {
+  "id": "d_2d2ca1bcac71713d2c02deca871ebe98",
+  "name": "Outstanding Housing Loans for Owner-Occupied Property, Quarterly",
+  "rows": 19,
+  "cols": 4,
+  "start": "2011-01-01",
+  "end": "2015-09-30",
+  "updated": "2024-06-06"
+ }
+}

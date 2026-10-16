@@ -1,0 +1,643 @@
+quarter,ec_completion_status,sale_status,units
+1999-Q4,Completed EC with pre-requisites for sale,Unsold,0
+1999-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,703
+1999-Q4,Uncompleted EC with pre-requisites for sale,Launched,4281
+1999-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,3578
+1999-Q4,Uncompleted EC with pre-requisites for sale,na,4470
+1999-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,189
+2000-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2000-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,569
+2000-Q1,Uncompleted EC with pre-requisites for sale,Launched,4044
+2000-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,3475
+2000-Q1,Uncompleted EC with pre-requisites for sale,na,4233
+2000-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,189
+2000-Q2,Completed EC with pre-requisites for sale,Unsold,18
+2000-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,638
+2000-Q2,Uncompleted EC with pre-requisites for sale,Launched,3314
+2000-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,2676
+2000-Q2,Uncompleted EC with pre-requisites for sale,na,3314
+2000-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2000-Q3,Completed EC with pre-requisites for sale,Unsold,225
+2000-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,385
+2000-Q3,Uncompleted EC with pre-requisites for sale,Launched,1474
+2000-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,1089
+2000-Q3,Uncompleted EC with pre-requisites for sale,na,1474
+2000-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2000-Q4,Completed EC with pre-requisites for sale,Unsold,518
+2000-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2000-Q4,Uncompleted EC with pre-requisites for sale,Launched,0
+2000-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2000-Q4,Uncompleted EC with pre-requisites for sale,na,0
+2000-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2001-Q1,Completed EC with pre-requisites for sale,Unsold,485
+2001-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2001-Q1,Uncompleted EC with pre-requisites for sale,Launched,0
+2001-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2001-Q1,Uncompleted EC with pre-requisites for sale,na,0
+2001-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2001-Q2,Completed EC with pre-requisites for sale,Unsold,239
+2001-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,6
+2001-Q2,Uncompleted EC with pre-requisites for sale,Launched,678
+2001-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,672
+2001-Q2,Uncompleted EC with pre-requisites for sale,na,1380
+2001-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,702
+2001-Q3,Completed EC with pre-requisites for sale,Unsold,150
+2001-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3
+2001-Q3,Uncompleted EC with pre-requisites for sale,Launched,1062
+2001-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,1059
+2001-Q3,Uncompleted EC with pre-requisites for sale,na,1380
+2001-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,318
+2001-Q4,Completed EC with pre-requisites for sale,Unsold,10
+2001-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,136
+2001-Q4,Uncompleted EC with pre-requisites for sale,Launched,1677
+2001-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,1541
+2001-Q4,Uncompleted EC with pre-requisites for sale,na,1677
+2001-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2002-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2002-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,56
+2002-Q1,Uncompleted EC with pre-requisites for sale,Launched,1677
+2002-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1621
+2002-Q1,Uncompleted EC with pre-requisites for sale,na,1677
+2002-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2002-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2002-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,23
+2002-Q2,Uncompleted EC with pre-requisites for sale,Launched,1677
+2002-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,1654
+2002-Q2,Uncompleted EC with pre-requisites for sale,na,1951
+2002-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,274
+2002-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2002-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,297
+2002-Q3,Uncompleted EC with pre-requisites for sale,Launched,2342
+2002-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,2045
+2002-Q3,Uncompleted EC with pre-requisites for sale,na,2342
+2002-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2002-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2002-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,314
+2002-Q4,Uncompleted EC with pre-requisites for sale,Launched,2571
+2002-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,2257
+2002-Q4,Uncompleted EC with pre-requisites for sale,na,2739
+2002-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,168
+2003-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2003-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,304
+2003-Q1,Uncompleted EC with pre-requisites for sale,Launched,2313
+2003-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,2009
+2003-Q1,Uncompleted EC with pre-requisites for sale,na,2421
+2003-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,108
+2003-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2003-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,257
+2003-Q2,Uncompleted EC with pre-requisites for sale,Launched,1991
+2003-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,1734
+2003-Q2,Uncompleted EC with pre-requisites for sale,na,2450
+2003-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,459
+2003-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2003-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,348
+2003-Q3,Uncompleted EC with pre-requisites for sale,Launched,1591
+2003-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,1243
+2003-Q3,Uncompleted EC with pre-requisites for sale,na,1818
+2003-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,227
+2003-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2003-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,279
+2003-Q4,Uncompleted EC with pre-requisites for sale,Launched,1591
+2003-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,1312
+2003-Q4,Uncompleted EC with pre-requisites for sale,na,1818
+2003-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,227
+2004-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2004-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,229
+2004-Q1,Uncompleted EC with pre-requisites for sale,Launched,1675
+2004-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1446
+2004-Q1,Uncompleted EC with pre-requisites for sale,na,1818
+2004-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,143
+2004-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2004-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,191
+2004-Q2,Uncompleted EC with pre-requisites for sale,Launched,1675
+2004-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,1484
+2004-Q2,Uncompleted EC with pre-requisites for sale,na,1818
+2004-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,143
+2004-Q3,Completed EC with pre-requisites for sale,Unsold,3
+2004-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,157
+2004-Q3,Uncompleted EC with pre-requisites for sale,Launched,987
+2004-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,830
+2004-Q3,Uncompleted EC with pre-requisites for sale,na,1130
+2004-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,143
+2004-Q4,Completed EC with pre-requisites for sale,Unsold,1
+2004-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,209
+2004-Q4,Uncompleted EC with pre-requisites for sale,Launched,1063
+2004-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,854
+2004-Q4,Uncompleted EC with pre-requisites for sale,na,1130
+2004-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,67
+2005-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2005-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,183
+2005-Q1,Uncompleted EC with pre-requisites for sale,Launched,666
+2005-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,483
+2005-Q1,Uncompleted EC with pre-requisites for sale,na,1177
+2005-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,511
+2005-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2005-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,302
+2005-Q2,Uncompleted EC with pre-requisites for sale,Launched,684
+2005-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,382
+2005-Q2,Uncompleted EC with pre-requisites for sale,na,903
+2005-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,219
+2005-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2005-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,192
+2005-Q3,Uncompleted EC with pre-requisites for sale,Launched,684
+2005-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,492
+2005-Q3,Uncompleted EC with pre-requisites for sale,na,903
+2005-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,219
+2005-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2005-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,192
+2005-Q4,Uncompleted EC with pre-requisites for sale,Launched,717
+2005-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,525
+2005-Q4,Uncompleted EC with pre-requisites for sale,na,903
+2005-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,186
+2006-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2006-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,116
+2006-Q1,Uncompleted EC with pre-requisites for sale,Launched,717
+2006-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,601
+2006-Q1,Uncompleted EC with pre-requisites for sale,na,903
+2006-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,186
+2006-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2006-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,157
+2006-Q2,Uncompleted EC with pre-requisites for sale,Launched,811
+2006-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,654
+2006-Q2,Uncompleted EC with pre-requisites for sale,na,903
+2006-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,92
+2006-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2006-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,123
+2006-Q3,Uncompleted EC with pre-requisites for sale,Launched,811
+2006-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,688
+2006-Q3,Uncompleted EC with pre-requisites for sale,na,903
+2006-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,92
+2006-Q4,Completed EC with pre-requisites for sale,Unsold,30
+2006-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,72
+2006-Q4,Uncompleted EC with pre-requisites for sale,Launched,352
+2006-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,280
+2006-Q4,Uncompleted EC with pre-requisites for sale,na,444
+2006-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,92
+2007-Q1,Completed EC with pre-requisites for sale,Unsold,16
+2007-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,110
+2007-Q1,Uncompleted EC with pre-requisites for sale,Launched,398
+2007-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,288
+2007-Q1,Uncompleted EC with pre-requisites for sale,na,444
+2007-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,46
+2007-Q2,Completed EC with pre-requisites for sale,Unsold,7
+2007-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,90
+2007-Q2,Uncompleted EC with pre-requisites for sale,Launched,398
+2007-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,308
+2007-Q2,Uncompleted EC with pre-requisites for sale,na,444
+2007-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,46
+2007-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2007-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,58
+2007-Q3,Uncompleted EC with pre-requisites for sale,Launched,398
+2007-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,340
+2007-Q3,Uncompleted EC with pre-requisites for sale,na,444
+2007-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,46
+2007-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2007-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,44
+2007-Q4,Uncompleted EC with pre-requisites for sale,Launched,444
+2007-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,400
+2007-Q4,Uncompleted EC with pre-requisites for sale,na,444
+2007-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2008-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2008-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3
+2008-Q1,Uncompleted EC with pre-requisites for sale,Launched,221
+2008-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,218
+2008-Q1,Uncompleted EC with pre-requisites for sale,na,221
+2008-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2008-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2008-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2008-Q2,Uncompleted EC with pre-requisites for sale,Launched,0
+2008-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2008-Q2,Uncompleted EC with pre-requisites for sale,na,0
+2008-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2008-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2008-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2008-Q3,Uncompleted EC with pre-requisites for sale,Launched,0
+2008-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2008-Q3,Uncompleted EC with pre-requisites for sale,na,0
+2008-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2008-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2008-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2008-Q4,Uncompleted EC with pre-requisites for sale,Launched,0
+2008-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2008-Q4,Uncompleted EC with pre-requisites for sale,na,0
+2008-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2009-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2009-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2009-Q1,Uncompleted EC with pre-requisites for sale,Launched,0
+2009-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2009-Q1,Uncompleted EC with pre-requisites for sale,na,0
+2009-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2009-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2009-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2009-Q2,Uncompleted EC with pre-requisites for sale,Launched,0
+2009-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2009-Q2,Uncompleted EC with pre-requisites for sale,na,0
+2009-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2009-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2009-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2009-Q3,Uncompleted EC with pre-requisites for sale,Launched,0
+2009-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2009-Q3,Uncompleted EC with pre-requisites for sale,na,0
+2009-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2009-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2009-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2009-Q4,Uncompleted EC with pre-requisites for sale,Launched,0
+2009-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2009-Q4,Uncompleted EC with pre-requisites for sale,na,0
+2009-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2010-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2010-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2010-Q1,Uncompleted EC with pre-requisites for sale,Launched,0
+2010-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2010-Q1,Uncompleted EC with pre-requisites for sale,na,0
+2010-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2010-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2010-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2010-Q2,Uncompleted EC with pre-requisites for sale,Launched,0
+2010-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2010-Q2,Uncompleted EC with pre-requisites for sale,na,0
+2010-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2010-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2010-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,0
+2010-Q3,Uncompleted EC with pre-requisites for sale,Launched,0
+2010-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,0
+2010-Q3,Uncompleted EC with pre-requisites for sale,na,979
+2010-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,979
+2010-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2010-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,607
+2010-Q4,Uncompleted EC with pre-requisites for sale,Launched,1659
+2010-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,1052
+2010-Q4,Uncompleted EC with pre-requisites for sale,na,2199
+2010-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,540
+2011-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2011-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,560
+2011-Q1,Uncompleted EC with pre-requisites for sale,Launched,2199
+2011-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1639
+2011-Q1,Uncompleted EC with pre-requisites for sale,na,2199
+2011-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2011-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2011-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,341
+2011-Q2,Uncompleted EC with pre-requisites for sale,Launched,2514
+2011-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,2173
+2011-Q2,Uncompleted EC with pre-requisites for sale,na,4194
+2011-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1680
+2011-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2011-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,780
+2011-Q3,Uncompleted EC with pre-requisites for sale,Launched,4194
+2011-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,3414
+2011-Q3,Uncompleted EC with pre-requisites for sale,na,4194
+2011-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2011-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2011-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,399
+2011-Q4,Uncompleted EC with pre-requisites for sale,Launched,4194
+2011-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,3795
+2011-Q4,Uncompleted EC with pre-requisites for sale,na,5330
+2011-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1136
+2012-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2012-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,741
+2012-Q1,Uncompleted EC with pre-requisites for sale,Launched,6058
+2012-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,5317
+2012-Q1,Uncompleted EC with pre-requisites for sale,na,6058
+2012-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2012-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2012-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,1028
+2012-Q2,Uncompleted EC with pre-requisites for sale,Launched,7139
+2012-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,6111
+2012-Q2,Uncompleted EC with pre-requisites for sale,na,7139
+2012-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2012-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2012-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,695
+2012-Q3,Uncompleted EC with pre-requisites for sale,Launched,7139
+2012-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,6444
+2012-Q3,Uncompleted EC with pre-requisites for sale,na,7916
+2012-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,777
+2012-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2012-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,1039
+2012-Q4,Uncompleted EC with pre-requisites for sale,Launched,9130
+2012-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,8091
+2012-Q4,Uncompleted EC with pre-requisites for sale,na,9130
+2012-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2013-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2013-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,372
+2013-Q1,Uncompleted EC with pre-requisites for sale,Launched,9130
+2013-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,8758
+2013-Q1,Uncompleted EC with pre-requisites for sale,na,9130
+2013-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2013-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2013-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,572
+2013-Q2,Uncompleted EC with pre-requisites for sale,Launched,10201
+2013-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,9629
+2013-Q2,Uncompleted EC with pre-requisites for sale,na,10713
+2013-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,512
+2013-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2013-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,756
+2013-Q3,Uncompleted EC with pre-requisites for sale,Launched,10335
+2013-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,9579
+2013-Q3,Uncompleted EC with pre-requisites for sale,na,10708
+2013-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,373
+2013-Q4,Completed EC with pre-requisites for sale,Unsold,1
+2013-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,973
+2013-Q4,Uncompleted EC with pre-requisites for sale,Launched,11214
+2013-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,10241
+2013-Q4,Uncompleted EC with pre-requisites for sale,na,11214
+2013-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2014-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2014-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,874
+2014-Q1,Uncompleted EC with pre-requisites for sale,Launched,10808
+2014-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,9934
+2014-Q1,Uncompleted EC with pre-requisites for sale,na,10808
+2014-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2014-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2014-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,739
+2014-Q2,Uncompleted EC with pre-requisites for sale,Launched,9449
+2014-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,8710
+2014-Q2,Uncompleted EC with pre-requisites for sale,na,11954
+2014-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,2505
+2014-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2014-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,609
+2014-Q3,Uncompleted EC with pre-requisites for sale,Launched,8273
+2014-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,7664
+2014-Q3,Uncompleted EC with pre-requisites for sale,na,10778
+2014-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,2505
+2014-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2014-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2028
+2014-Q4,Uncompleted EC with pre-requisites for sale,Launched,10362
+2014-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,8334
+2014-Q4,Uncompleted EC with pre-requisites for sale,na,10740
+2014-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,378
+2015-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2015-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2129
+2015-Q1,Uncompleted EC with pre-requisites for sale,Launched,9604
+2015-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,7475
+2015-Q1,Uncompleted EC with pre-requisites for sale,na,10121
+2015-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,517
+2015-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2015-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2232
+2015-Q2,Uncompleted EC with pre-requisites for sale,Launched,9356
+2015-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,7124
+2015-Q2,Uncompleted EC with pre-requisites for sale,na,12363
+2015-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,3007
+2015-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2015-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3435
+2015-Q3,Uncompleted EC with pre-requisites for sale,Launched,11078
+2015-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,7643
+2015-Q3,Uncompleted EC with pre-requisites for sale,na,12203
+2015-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1125
+2015-Q4,Completed EC with pre-requisites for sale,Unsold,17
+2015-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3433
+2015-Q4,Uncompleted EC with pre-requisites for sale,Launched,10816
+2015-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,7383
+2015-Q4,Uncompleted EC with pre-requisites for sale,na,12602
+2015-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1786
+2016-Q1,Completed EC with pre-requisites for sale,Unsold,13
+2016-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3268
+2016-Q1,Uncompleted EC with pre-requisites for sale,Launched,9335
+2016-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,6067
+2016-Q1,Uncompleted EC with pre-requisites for sale,na,12077
+2016-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,2742
+2016-Q2,Completed EC with pre-requisites for sale,Unsold,13
+2016-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,3479
+2016-Q2,Uncompleted EC with pre-requisites for sale,Launched,9562
+2016-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,6083
+2016-Q2,Uncompleted EC with pre-requisites for sale,na,11044
+2016-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1482
+2016-Q3,Completed EC with pre-requisites for sale,Unsold,19
+2016-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2986
+2016-Q3,Uncompleted EC with pre-requisites for sale,Launched,9406
+2016-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,6420
+2016-Q3,Uncompleted EC with pre-requisites for sale,na,10026
+2016-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,620
+2016-Q4,Completed EC with pre-requisites for sale,Unsold,29
+2016-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2415
+2016-Q4,Uncompleted EC with pre-requisites for sale,Launched,8080
+2016-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,5665
+2016-Q4,Uncompleted EC with pre-requisites for sale,na,9104
+2016-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1024
+2017-Q1,Completed EC with pre-requisites for sale,Unsold,68
+2017-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2409
+2017-Q1,Uncompleted EC with pre-requisites for sale,Launched,8543
+2017-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,6134
+2017-Q1,Uncompleted EC with pre-requisites for sale,na,8543
+2017-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2017-Q2,Completed EC with pre-requisites for sale,Unsold,29
+2017-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,1591
+2017-Q2,Uncompleted EC with pre-requisites for sale,Launched,6628
+2017-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,5037
+2017-Q2,Uncompleted EC with pre-requisites for sale,na,7159
+2017-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,531
+2017-Q3,Completed EC with pre-requisites for sale,Unsold,171
+2017-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,527
+2017-Q3,Uncompleted EC with pre-requisites for sale,Launched,6634
+2017-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,6107
+2017-Q3,Uncompleted EC with pre-requisites for sale,na,6634
+2017-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2017-Q4,Completed EC with pre-requisites for sale,Unsold,119
+2017-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,236
+2017-Q4,Uncompleted EC with pre-requisites for sale,Launched,5516
+2017-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,5280
+2017-Q4,Uncompleted EC with pre-requisites for sale,na,5516
+2017-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2018-Q1,Completed EC with pre-requisites for sale,Unsold,100
+2018-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,51
+2018-Q1,Uncompleted EC with pre-requisites for sale,Launched,3303
+2018-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,3252
+2018-Q1,Uncompleted EC with pre-requisites for sale,na,3931
+2018-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,628
+2018-Q2,Completed EC with pre-requisites for sale,Unsold,27
+2018-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,18
+2018-Q2,Uncompleted EC with pre-requisites for sale,Launched,2518
+2018-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,2500
+2018-Q2,Uncompleted EC with pre-requisites for sale,na,2518
+2018-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2018-Q3,Completed EC with pre-requisites for sale,Unsold,5
+2018-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,8
+2018-Q3,Uncompleted EC with pre-requisites for sale,Launched,2014
+2018-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,2006
+2018-Q3,Uncompleted EC with pre-requisites for sale,na,2014
+2018-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2018-Q4,Completed EC with pre-requisites for sale,Unsold,1
+2018-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,5
+2018-Q4,Uncompleted EC with pre-requisites for sale,Launched,2014
+2018-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,2009
+2018-Q4,Uncompleted EC with pre-requisites for sale,na,2014
+2018-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2019-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2019-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,8
+2019-Q1,Uncompleted EC with pre-requisites for sale,Launched,1656
+2019-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1648
+2019-Q1,Uncompleted EC with pre-requisites for sale,na,1656
+2019-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2019-Q2,Completed EC with pre-requisites for sale,Unsold,1
+2019-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,2
+2019-Q2,Uncompleted EC with pre-requisites for sale,Launched,1159
+2019-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,1157
+2019-Q2,Uncompleted EC with pre-requisites for sale,na,1979
+2019-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,820
+2019-Q3,Completed EC with pre-requisites for sale,Unsold,1
+2019-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,398
+2019-Q3,Uncompleted EC with pre-requisites for sale,Launched,1979
+2019-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,1581
+2019-Q3,Uncompleted EC with pre-requisites for sale,na,1979
+2019-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2019-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2019-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,366
+2019-Q4,Uncompleted EC with pre-requisites for sale,Launched,1448
+2019-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,1082
+2019-Q4,Uncompleted EC with pre-requisites for sale,na,2492
+2019-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1044
+2020-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2020-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,829
+2020-Q1,Uncompleted EC with pre-requisites for sale,Launched,2492
+2020-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1663
+2020-Q1,Uncompleted EC with pre-requisites for sale,na,2492
+2020-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2020-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2020-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,778
+2020-Q2,Uncompleted EC with pre-requisites for sale,Launched,2492
+2020-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,1714
+2020-Q2,Uncompleted EC with pre-requisites for sale,na,2492
+2020-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2020-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2020-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,632
+2020-Q3,Uncompleted EC with pre-requisites for sale,Launched,2492
+2020-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,1860
+2020-Q3,Uncompleted EC with pre-requisites for sale,na,3192
+2020-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,700
+2020-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2020-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,518
+2020-Q4,Uncompleted EC with pre-requisites for sale,Launched,1864
+2020-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,1346
+2020-Q4,Uncompleted EC with pre-requisites for sale,na,2977
+2020-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1113
+2021-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2021-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,584
+2021-Q1,Uncompleted EC with pre-requisites for sale,Launched,2564
+2021-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,1980
+2021-Q1,Uncompleted EC with pre-requisites for sale,na,3473
+2021-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,909
+2021-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2021-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,535
+2021-Q2,Uncompleted EC with pre-requisites for sale,Launched,2977
+2021-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,2442
+2021-Q2,Uncompleted EC with pre-requisites for sale,na,3473
+2021-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,496
+2021-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2021-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,336
+2021-Q3,Uncompleted EC with pre-requisites for sale,Launched,3473
+2021-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,3137
+2021-Q3,Uncompleted EC with pre-requisites for sale,na,3473
+2021-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2021-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2021-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,125
+2021-Q4,Uncompleted EC with pre-requisites for sale,Launched,3473
+2021-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,3348
+2021-Q4,Uncompleted EC with pre-requisites for sale,na,3473
+2021-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2022-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2022-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,18
+2022-Q1,Uncompleted EC with pre-requisites for sale,Launched,3473
+2022-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,3455
+2022-Q1,Uncompleted EC with pre-requisites for sale,na,4089
+2022-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,616
+2022-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2022-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,457
+2022-Q2,Uncompleted EC with pre-requisites for sale,Launched,4089
+2022-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,3632
+2022-Q2,Uncompleted EC with pre-requisites for sale,na,4089
+2022-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2022-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2022-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,443
+2022-Q3,Uncompleted EC with pre-requisites for sale,Launched,4089
+2022-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,3646
+2022-Q3,Uncompleted EC with pre-requisites for sale,na,5346
+2022-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,1257
+2022-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2022-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,577
+2022-Q4,Uncompleted EC with pre-requisites for sale,Launched,5346
+2022-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,4769
+2022-Q4,Uncompleted EC with pre-requisites for sale,na,5346
+2022-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2023-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2023-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,419
+2023-Q1,Uncompleted EC with pre-requisites for sale,Launched,4526
+2023-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,4107
+2023-Q1,Uncompleted EC with pre-requisites for sale,na,4526
+2023-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2023-Q2,Completed EC with pre-requisites for sale,Unsold,0
+2023-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,370
+2023-Q2,Uncompleted EC with pre-requisites for sale,Launched,4526
+2023-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,4156
+2023-Q2,Uncompleted EC with pre-requisites for sale,na,4886
+2023-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,360
+2023-Q3,Completed EC with pre-requisites for sale,Unsold,2
+2023-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,317
+2023-Q3,Uncompleted EC with pre-requisites for sale,Launched,4390
+2023-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,4073
+2023-Q3,Uncompleted EC with pre-requisites for sale,na,4390
+2023-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2023-Q4,Completed EC with pre-requisites for sale,Unsold,0
+2023-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,288
+2023-Q4,Uncompleted EC with pre-requisites for sale,Launched,4390
+2023-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,4102
+2023-Q4,Uncompleted EC with pre-requisites for sale,na,4902
+2023-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,512
+2024-Q1,Completed EC with pre-requisites for sale,Unsold,0
+2024-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,358
+2024-Q1,Uncompleted EC with pre-requisites for sale,Launched,4902
+2024-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,4544
+2024-Q1,Uncompleted EC with pre-requisites for sale,na,4902
+2024-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2024-Q2,Completed EC with pre-requisites for sale,Unsold,1
+2024-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,265
+2024-Q2,Uncompleted EC with pre-requisites for sale,Launched,3445
+2024-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,3180
+2024-Q2,Uncompleted EC with pre-requisites for sale,na,3445
+2024-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2024-Q3,Completed EC with pre-requisites for sale,Unsold,0
+2024-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,171
+2024-Q3,Uncompleted EC with pre-requisites for sale,Launched,2745
+2024-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,2574
+2024-Q3,Uncompleted EC with pre-requisites for sale,na,3249
+2024-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,504
+2024-Q4,Completed EC with pre-requisites for sale,Unsold,2
+2024-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,158
+2024-Q4,Uncompleted EC with pre-requisites for sale,Launched,3249
+2024-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,3091
+2024-Q4,Uncompleted EC with pre-requisites for sale,na,4009
+2024-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,760
+2025-Q1,Completed EC with pre-requisites for sale,Unsold,1
+2025-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,131
+2025-Q1,Uncompleted EC with pre-requisites for sale,Launched,4009
+2025-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,3878
+2025-Q1,Uncompleted EC with pre-requisites for sale,na,4009
+2025-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2025-Q2,Completed EC with pre-requisites for sale,Unsold,1
+2025-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,17
+2025-Q2,Uncompleted EC with pre-requisites for sale,Launched,3370
+2025-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,3353
+2025-Q2,Uncompleted EC with pre-requisites for sale,na,3970
+2025-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,600
+2025-Q3,Completed EC with pre-requisites for sale,Unsold,3
+2025-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,63
+2025-Q3,Uncompleted EC with pre-requisites for sale,Launched,2736
+2025-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,2673
+2025-Q3,Uncompleted EC with pre-requisites for sale,na,3484
+2025-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,748
+2025-Q4,Completed EC with pre-requisites for sale,Unsold,3
+2025-Q4,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,14
+2025-Q4,Uncompleted EC with pre-requisites for sale,Launched,2736
+2025-Q4,Uncompleted EC with pre-requisites for sale,Launched and Sold,2722
+2025-Q4,Uncompleted EC with pre-requisites for sale,na,3484
+2025-Q4,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,748
+2026-Q1,Completed EC with pre-requisites for sale,Unsold,4
+2026-Q1,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,205
+2026-Q1,Uncompleted EC with pre-requisites for sale,Launched,3696
+2026-Q1,Uncompleted EC with pre-requisites for sale,Launched and Sold,3491
+2026-Q1,Uncompleted EC with pre-requisites for sale,na,3696
+2026-Q1,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2026-Q2,Completed EC with pre-requisites for sale,Unsold,1
+2026-Q2,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,149
+2026-Q2,Uncompleted EC with pre-requisites for sale,Launched,3184
+2026-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,3035
+2026-Q2,Uncompleted EC with pre-requisites for sale,na,3184
+2026-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
