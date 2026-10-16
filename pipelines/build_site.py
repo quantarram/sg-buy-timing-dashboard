@@ -129,6 +129,8 @@ legend = "".join(f'<div>{pill(t, k)}</div><div>{d}</div>' for t, k, d in (
 asof = f'Latest bidding exercise: round {cards["A"]["rnd"]} of {cards["A"]["month"]} &middot; monthly series to {Q["A"].index[-1].strftime("%b %Y")} &middot; built {now.strftime("%d %b %Y %H:%M")} SGT'
 quota_cut_12 = WF.loc["ALL admitted", "lift"]
 _sub = pd.read_csv(os.path.join(ROOT, "research", "coe_robustness_subperiods.csv")); _g = lambda p_: _sub[(_sub.period == p_) & (_sub.tf == 6)].iloc[0]
+_thr = pd.read_csv(os.path.join(ROOT, 'research', 'coe_robustness_thresholds.csv')); _m = _thr[(_thr.q == 0.2) & (_thr.yq == 0.2)].set_index('tf')
+QUOTATXT = (f"After a quota cut the premium was in its top 20% of moves {_m.loc[3,'cpe']*100:.0f}% of the time three months later ({_m.loc[3,'base']*100:.0f}% base), {_m.loc[6,'cpe']*100:.0f}% after six ({_m.loc[6,'base']*100:.0f}%) and {_m.loc[12,'cpe']*100:.0f}% after twelve ({_m.loc[12,'base']*100:.0f}%), with thresholds from past data only.")
 POST2022 = (f"The effect is strong through 2021 (six-month lift {_g('2010-2016').lift:.1f} in 2010 to 2016 and {_g('2017-2021').lift:.1f} in 2017 to 2021) and not detected from 2022 (lift {_g('2022-2026').lift:.1f} on {int(_g('2022-2026').entries)} entries): the quota formula changed in 2022 and 2023, and quota cuts have been rare since.")
 # ---- ledger state and track record --------------------------------------------------------------------------------------------------------------
 import track_section
@@ -140,7 +142,7 @@ TRACK = track_section.build()
 html = open(os.path.join(ROOT, "pipelines", "template.html"), encoding="utf-8").read()
 rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{BADGES}}": badges, "{{LEGEND}}": legend, "{{CARD_A}}": card("A"), "{{CARD_B}}": card("B"), "{{STATE_A}}": state_table("A"), "{{STATE_B}}": state_table("B"), "{{BASE}}": base_table(),
        "{{LONG}}": json.dumps(long_traces), "{{RECENT}}": json.dumps(recent), "{{CYCLE}}": json.dumps(cycle_traces),
-       "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}", "{{POST2022}}": POST2022,
+       "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}", "{{POST2022}}": POST2022, "{{QUOTATXT}}": QUOTATXT,
        "{{ENTRIES}}": f'{int(WF.loc["ALL admitted", "entries"]):,}'}
 for k_, v_ in PROP.items(): rep["{{" + k_ + "}}"] = str(v_)
 for k_, v_ in TRACK.items(): rep["{{" + k_ + "}}"] = str(v_)
