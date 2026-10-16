@@ -3,41 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Singapore buy-timing</title>
+<title>Singapore Buy-Timing Dashboard</title>
 <meta name="description" content="When to buy a car in Singapore: COE premium conditions, base rates and the supply cycle, scored against past data. Research, not advice.">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
 <style>
-:root{--bg:#f7f8fa;--panel:#fff;--ink:#14202b;--mute:#5b6b7a;--line:#dfe5ec;--a:#2563eb;--b:#dc2626;--calm-bg:#e8f3ec;--calm:#1f6b3a;--warn-bg:#fdf0d9;--warn:#8a5a00;--note-bg:#eaeef3;--note:#4a5a6a;--up:#b42318;--down:#1f6b3a}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1720;--panel:#17212c;--ink:#e6edf3;--mute:#9fb0c0;--line:#27343f;--calm-bg:#163626;--calm:#7fd6a0;--warn-bg:#3b2d0f;--warn:#f0c46a;--note-bg:#212d39;--note:#a9b8c6;--up:#ff8a7a;--down:#7fd6a0}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:1080px;margin:0 auto;padding:20px 16px 48px}
-header h1{font-size:1.55rem;margin:.2rem 0 .1rem;letter-spacing:-.01em}
-.asof{color:var(--mute);font-size:.85rem}
-.banner{margin:16px 0;padding:14px 16px;border:1px solid var(--line);border-left:4px solid var(--calm);background:var(--panel);border-radius:8px;font-size:1.02rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:14px 0}
-.card,.block{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+:root{--bg:#0C0E0D;--card:#141614;--card2:#1B1E1B;--border:#2C302C;--border2:#3A3F3A;--text:#DDE8DD;--muted:#7A8F7A;--gold:#C9A84C;--green:#4DB87A;--red:#E05555;--amber:#E8A020;--blue:#7FB5E0;--mono:'IBM Plex Mono',monospace;--serif:'DM Serif Display',serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);font-family:'Inter',system-ui,sans-serif;color:var(--text);font-size:14px;line-height:1.55}
+.page{max-width:1180px;margin:0 auto;padding:28px 16px 70px}
+.header{background:linear-gradient(160deg,#141614,#1B1E1B);border:1px solid var(--border2);border-radius:16px;padding:26px 28px;margin-bottom:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+.h-sub{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.h-title{font-family:var(--serif);font-size:28px;line-height:1.15}.h-title em{font-style:italic;color:var(--gold)}
+.h-meta{font-size:12px;color:var(--muted);margin-top:6px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.vbadge{border-radius:12px;padding:10px 16px;text-align:center;border:1px solid;min-width:150px}
+.vbadge .vl{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;display:block}
+.vbadge .vt{font-family:var(--mono);font-size:15px;font-weight:600;letter-spacing:.03em;display:block;margin-top:2px}
+.tone-neutral{color:#B0A387;background:rgba(176,163,135,.10);border-color:rgba(176,163,135,.28)}
+.tone-warn{color:var(--amber);background:rgba(232,160,32,.10);border-color:rgba(232,160,32,.30)}
+.tone-good{color:var(--green);background:rgba(77,184,122,.12);border-color:rgba(77,184,122,.35)}
+.tone-note{color:var(--muted);background:rgba(122,143,122,.10);border-color:rgba(122,143,122,.28)}
+.banner{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:10px;padding:14px 18px;margin-bottom:6px}
+.banner b{font-family:var(--mono);letter-spacing:.03em}.banner .sub2{color:var(--muted);font-size:12.5px;margin-top:4px}
+h2{font-family:var(--serif);font-weight:400;font-size:22px;margin:34px 0 10px}
+h3{font-size:14px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:12px 0}
+.card,.block{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
 .cardhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
-h2{font-size:1.15rem;margin:30px 0 8px}h3{margin:0;font-size:1rem}
-.big{font-size:2rem;font-weight:650;letter-spacing:-.02em;margin-top:6px;font-variant-numeric:tabular-nums}
-.sub{font-size:.88rem;color:var(--mute)}.sub.up{color:var(--up)}.sub.down{color:var(--down)}
-dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:12px 0 0;font-size:.9rem}dt{color:var(--mute)}dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
-.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.78rem;font-weight:600;white-space:nowrap}
-.pill.calm{background:var(--calm-bg);color:var(--calm)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.note{background:var(--note-bg);color:var(--note)}
+.big{font-family:var(--mono);font-size:30px;font-weight:600;margin-top:8px;letter-spacing:-.01em}
+.sub{font-size:12px;color:var(--muted)}.sub.up{color:var(--red)}.sub.down{color:var(--green)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;margin:12px 0 0;font-size:12.5px}dt{color:var(--muted)}dd{margin:0;text-align:right;font-family:var(--mono);font-size:12px}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.04em;white-space:nowrap;border:1px solid}
 .chart{height:340px}.tablewrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:.88rem}th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mute);font-weight:600}td.num{text-align:right;font-variant-numeric:tabular-nums}
-p{margin:.5rem 0}ul{padding-left:1.2rem;margin:.4rem 0}li{margin:.25rem 0}
-.tag{font-size:.8rem;color:var(--mute)}
-footer{margin-top:34px;color:var(--mute);font-size:.82rem;border-top:1px solid var(--line);padding-top:14px}
-a{color:var(--a)}
-:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}th,td{padding:7px 8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600;font-size:11.5px}td.num{text-align:right;font-family:var(--mono)}
+p{margin:.55rem 0}ul{padding-left:1.2rem;margin:.4rem 0}li{margin:.3rem 0}
+.tag{font-size:12px;color:var(--muted);margin-bottom:8px}
+.legend{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:12.5px;align-items:center}
+footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid var(--border);padding-top:14px}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style>
 </head>
-<body><div class="wrap">
-<header><h1>Singapore buy-timing</h1><div class="asof">{{ASOF}}</div></header>
+<body><div class="page">
+<div class="header">
+  <div><div class="h-sub">Singapore &middot; Public data &middot; CPE framework</div>
+  <div class="h-title"><em>Buy-Timing</em> Dashboard: Cars (COE)</div>
+  <div class="h-meta">{{ASOF}}</div></div>
+  <div class="badges">{{BADGES}}</div>
+</div>
 <div class="banner">{{HEADLINE}}</div>
 
-<h2>Cars: COE premium</h2>
+<h2>COE premium</h2>
 <div class="grid">{{CARD_A}}{{CARD_B}}</div>
 <div class="block"><h3>Premium since 2002 (monthly mean of the two rounds)</h3><div id="long" class="chart"></div></div>
 <div class="block" style="margin-top:14px"><h3>Last three years, every bidding exercise</h3><div id="recent" class="chart"></div></div>
@@ -45,6 +63,7 @@ a{color:var(--a)}
 <h2>What the registered conditions say now</h2>
 <p class="tag">Each predictor has a mechanism written down before it was tested. The percentile compares today with all earlier months. "Past evidence" is the out-of-sample lift (1.0 means no better than the base rate) from a causal walk-forward, with the number of scored entries.</p>
 <div class="grid"><section class="block"><h3>Category A</h3><div class="tablewrap">{{STATE_A}}</div></section><section class="block"><h3>Category B</h3><div class="tablewrap">{{STATE_B}}</div></section></div>
+<div class="block" style="margin-top:12px"><h3>How to read the verdict</h3><div class="legend" style="margin-top:10px">{{LEGEND}}</div></div>
 
 <h2>Base rates</h2>
 <p class="tag">How often the monthly premium was lower, rose more than 5%, and the median change, after 3, 6 and 12 months. The last ten years carry a rising trend.</p>
@@ -66,12 +85,11 @@ a{color:var(--a)}
 <h2>Property: next</h2>
 <div class="block"><p>Executive condominiums, private condominiums and landed homes are next. The public data are identified on data.gov.sg: URA price and rental indices (quarterly, from 1975; non-landed by region from 2004), executive condominium launches, sales and supply pipeline, available and vacant stock, outstanding housing loans, and mortgage benchmark rates. Quarterly data and a handful of cycles mean this part will be a conditions-and-risk panel with probability statements only where the evidence supports them.</p></div>
 
-<footer>Research, not financial advice. Data: Land Transport Authority, Singapore Department of Statistics and the Monetary Authority of Singapore via data.gov.sg (Singapore Open Data Licence). The page is rebuilt every day, but the figures only change when new data are published: COE results twice a month, vehicle statistics and interest rates monthly, property indices quarterly. Method and code: the <a href="https://github.com/quantarram/sg-buy-timing-dashboard">repository</a> and the <a href="https://github.com/quantarram/quant-regime-research">CPE framework</a>.</footer>
+<footer>Research, not financial advice. A "wait and watch" verdict means no measured timing edge; it is not a recommendation to delay a purchase you need. Data: Land Transport Authority, Singapore Department of Statistics and the Monetary Authority of Singapore via data.gov.sg (Singapore Open Data Licence). The page is rebuilt every day, but the figures only change when new data are published: COE results twice a month, vehicle statistics and interest rates monthly, property indices quarterly. Method and code: the <a href="https://github.com/quantarram/sg-buy-timing-dashboard">repository</a> and the <a href="https://github.com/quantarram/quant-regime-research">CPE framework</a>.</footer>
 </div>
 <script>
-const dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-const ink=dark?'#e6edf3':'#14202b', grid=dark?'#27343f':'#e3e8ee';
-function lay(yt,extra){return Object.assign({margin:{l:56,r:14,t:10,b:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:ink,size:12},hovermode:'x unified',legend:{orientation:'h',y:-0.18},xaxis:{gridcolor:grid},yaxis:{gridcolor:grid,title:yt,rangemode:'tozero'}},extra||{})}
+const ink='#DDE8DD', grid='#2C302C';
+function lay(yt,extra){return Object.assign({margin:{l:56,r:14,t:10,b:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:ink,size:12,family:'Inter, sans-serif'},hovermode:'x unified',legend:{orientation:'h',y:-0.18},xaxis:{gridcolor:grid,linecolor:grid},yaxis:{gridcolor:grid,linecolor:grid,title:yt,rangemode:'tozero'}},extra||{})}
 const cfg={responsive:true,displaylogo:false};
 Plotly.newPlot('long',{{LONG}},lay('S$ thousand'),cfg);
 Plotly.newPlot('recent',{{RECENT}},lay('S$ thousand'),cfg);

@@ -63,19 +63,28 @@ def tr(x, y, name, color, dash=None, width=2):
     d = dict(x=[str(i)[:10] for i in x], y=[None if pd.isna(v) else round(float(v), 2) for v in y], name=name, type="scatter", mode="lines", line=dict(color=color, width=width));
     if dash: d["line"]["dash"] = dash
     return d
-C_A, C_B, C_G, C_O = "#2563eb", "#dc2626", "#16a34a", "#d97706"
+C_A, C_B, C_G, C_O = "#C9A84C", "#7FB5E0", "#4DB87A", "#E8A020"
 long_traces = [tr(Q[c].index, Q[c]["premium"] / 1000, CAT[c], col) for c, col in (("A", C_A), ("B", C_B))]
 recent = []
 for c, col in (("A", C_A), ("B", C_B)):
     s = ex[(ex["vehicle_class"] == CAT[c]) & (ex["t"] >= ex["t"].max() - pd.Timedelta(days=3 * 365))].sort_values("t"); recent.append(tr(s["t"], s["premium"] / 1000, CAT[c], col))
 _w = lambda s_: s_[(s_.index >= "2002-01-01") & (s_.index <= "2030-01-01")]
-cycle_traces = [tr(_w(dr6).index, _w(dr6), "De-registrations A+B (6-month mean)", C_O), tr(_w(sched6).index, _w(sched6), "Scheduled expiries (registrations 10 years earlier)", C_G, "dot"), tr(_w(nr.rolling(6).mean()).index, _w(nr.rolling(6).mean()), "New registrations A+B (6-month mean)", "#94a3b8", None, 1)]
+cycle_traces = [tr(_w(dr6).index, _w(dr6), "De-registrations A+B (6-month mean)", C_O), tr(_w(sched6).index, _w(sched6), "Scheduled expiries (registrations 10 years earlier)", C_G, "dot"), tr(_w(nr.rolling(6).mean()).index, _w(nr.rolling(6).mean()), "New registrations A+B (6-month mean)", "#7A8F7A", None, 1)]
 
 # ---- html -------------------------------------------------------------------------------------------------------------------------------------------
-def pill(txt, kind): return f'<span class="pill {kind}">{txt}</span>'
+TONE = {"neutral": "tone-neutral", "warn": "tone-warn", "good": "tone-good", "note": "tone-note"}
+def pill(txt, kind): return f'<span class="pill {TONE[kind]}">{txt}</span>'
+def verdict(c):
+    """Graded verdict from the registered conditions: WAIT & WATCH when none is active (the default)."""
+    act = active[c]
+    if not act: return "WAIT &amp; WATCH", "neutral"
+    imp = {r["implied"] for r in act}
+    if imp == {"higher"}: return "RISING PRESSURE", "warn"
+    if imp == {"lower"}: return "EASING PRESSURE", "good"
+    return "MIXED SIGNALS", "warn"
 def card(c):
     d = cards[c]; chg = d["chg"] * 100; sign = "up" if chg > 0 else "down"
-    act = active[c]; st = pill(f"{len(act)} condition{'s' if len(act)!=1 else ''} active", "warn") if act else pill("no condition active", "calm")
+    vt, vk = verdict(c); st = pill(vt, vk)
     bids = f"{d['bids']:,} bids for {d['quota']:,} quota" if d["bids"] else f"quota {d['quota']:,}"
     return f'''<section class="card"><div class="cardhead"><h3>{CAT[c]}</h3>{st}</div>
 <div class="big">S${fmt(d["last"])}</div><div class="sub {sign}">{chg:+.1f}% vs the previous round (S${fmt(d["prev"])}) &middot; round {d["rnd"]}, {d["month"]}</div>
@@ -83,7 +92,7 @@ def card(c):
 def state_table(c):
     out = ['<table><thead><tr><th>Predictor</th><th>Percentile</th><th>Read</th><th>Past evidence</th></tr></thead><tbody>']
     for r in state[c]:
-        read = pill(f"active: premium {r['implied']}", "warn") if r["active"] else (pill("tail, no supported effect", "note") if r["tail"] else pill("normal range", "calm"))
+        read = pill(f"active: premium {r['implied']}", "warn") if r["active"] else (pill("tail, no supported effect", "note") if r["tail"] else pill("normal range", "neutral"))
         ev = (f"lift {r['lift']:.2f} on {r['n']:,} entries" + (" (too few to rely on)" if r["n"] < 100 else "")) if r["lift"] is not None else "not scored on its own"
         out.append(f'<tr><td>{r["label"]}</td><td class="num">{r["pct"]:.0f}</td><td>{read}</td><td>{ev}</td></tr>')
     out.append("</tbody></table>"); return "".join(out)
@@ -94,12 +103,23 @@ def base_table():
             a, b = base["A"][lab][h], base["B"][lab][h]
             rows.append(f'<tr><td>{h} months ahead, {lab}</td>' + "".join(f'<td class="num">{x["lower"]*100:.0f}%</td><td class="num">{x["up5"]*100:.0f}%</td><td class="num">{x["med"]*100:+.1f}%</td>' for x in (a, b)) + "</tr>")
     rows.append("</tbody></table>"); return "".join(rows)
-n_act = sum(len(v) for v in active.values())
-headline = ("No condition from the registered set is active. The premium sits near record highs, so the useful reading is the base rates below, not a call." if not n_act else f"{n_act} registered condition(s) active; see the table for what each implies and how much past evidence stands behind it.")
+n_act = sum(len(v) for v in active.values()); VA, VB = verdict("A"), verdict("B")
+if not n_act:
+    headline = ("<b>WAIT &amp; WATCH.</b> No registered condition is active in either category, so timing carries no measured edge right now. Premiums are near record highs: read the base rates and the supply cycle below."
+                "<div class='sub2'>This is not a recommendation to delay a purchase you need. A verdict other than wait and watch appears only when a condition with out-of-sample support is in its tail.</div>")
+else:
+    headline = (f"<b>{VA[0]} (A) &middot; {VB[0]} (B).</b> {n_act} registered condition(s) active; the table below shows what each implies and how much past evidence stands behind it."
+                "<div class='sub2'>Each verdict is a statement about conditions and base rates, not a recommendation.</div>")
+badges = "".join(f'<div class="vbadge {TONE[v[1]]}"><span class="vl">Category {c}</span><span class="vt">{v[0]}</span></div>' for c, v in (("A", VA), ("B", VB)))
+legend = "".join(f'<div>{pill(t, k)}</div><div>{d}</div>' for t, k, d in (
+    ("WAIT &amp; WATCH", "neutral", "No registered condition with out-of-sample support is in its tail. No measured timing edge; the base rates apply."),
+    ("RISING PRESSURE", "warn", "A supported condition (today: a quota cut) is active and past data say the premium was more often in its top moves over the following 6 to 12 months."),
+    ("EASING PRESSURE", "good", "A supported condition points to a lower premium (none is supported at present, so this tier is unused)."),
+    ("MIXED SIGNALS", "warn", "Active conditions point in opposite directions.")))
 asof = f'Latest bidding exercise: round {cards["A"]["rnd"]} of {cards["A"]["month"]} &middot; monthly series to {Q["A"].index[-1].strftime("%b %Y")} &middot; built {now.strftime("%d %b %Y %H:%M")} SGT'
 quota_cut_12 = WF.loc["ALL admitted", "lift"]
 html = open(os.path.join(ROOT, "pipelines", "template.html"), encoding="utf-8").read()
-rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{CARD_A}}": card("A"), "{{CARD_B}}": card("B"), "{{STATE_A}}": state_table("A"), "{{STATE_B}}": state_table("B"), "{{BASE}}": base_table(),
+rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{BADGES}}": badges, "{{LEGEND}}": legend, "{{CARD_A}}": card("A"), "{{CARD_B}}": card("B"), "{{STATE_A}}": state_table("A"), "{{STATE_B}}": state_table("B"), "{{BASE}}": base_table(),
        "{{LONG}}": json.dumps(long_traces), "{{RECENT}}": json.dumps(recent), "{{CYCLE}}": json.dumps(cycle_traces),
        "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}",
        "{{ENTRIES}}": f'{int(WF.loc["ALL admitted", "entries"]):,}'}
