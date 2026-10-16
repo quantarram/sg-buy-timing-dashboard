@@ -8,15 +8,6 @@
   "end": "2026-06-30",
   "updated": "2026-07-27"
  },
- "ppi_by_type": {
-  "id": "d_c0c26484c655113b0ab5abaa0a49952b",
-  "name": "Private Residential Property Price Index By Type Of Property, (Base Quarter 2009-Q1 = 100)",
-  "rows": 362,
-  "cols": 4,
-  "start": "1975-01-01",
-  "end": "2020-03-31",
-  "updated": "2024-06-06"
- },
  "ppi_by_type_b": {
   "id": "d_da00b36ca8c831322fa0bb2a3378a476",
   "name": "Private Residential Property Price Index By Type Of Property, (1st Quarter 2009 = 100), Quarterly",
@@ -25,15 +16,6 @@
   "start": "1975-01-01",
   "end": "2026-06-30",
   "updated": "2026-07-24"
- },
- "ppi_alt": {
-  "id": "d_f76411aa34d98559b6194419d796ce59",
-  "name": "Private Residential Property Price Index (Base Quarter 2009-Q1 = 100)",
-  "rows": 181,
-  "cols": 3,
-  "start": "1975-01-01",
-  "end": "2020-03-31",
-  "updated": "2024-06-06"
  },
  "ppi_nonlanded_locality": {
   "id": "d_f65e490a8ad430f60a9a3d9df2bff2a0",
@@ -143,15 +125,6 @@
   "end": "2026-06-30",
   "updated": "2026-07-27"
  },
- "supply_pipeline": {
-  "id": "d_baa848bbdbf4af7b4d709f147fcf3c9b",
-  "name": "Supply of Private Residential Properties in the Pipeline by Development Status, Quarterly",
-  "rows": 152,
-  "cols": 4,
-  "start": "2014-01-01",
-  "end": "2018-09-30",
-  "updated": "2024-06-06"
- },
  "supply_pipeline_b": {
   "id": "d_055b6549444dedb341c50805d9682a41",
   "name": "Supply Of Private Residential Properties In The Pipeline By Development Status (End Of Period), Quarterly",
@@ -188,15 +161,6 @@
   "end": "2026-06-30",
   "updated": "2026-07-24"
  },
- "ec_pipeline": {
-  "id": "d_4e8073b6cf272998f14fd970a24c1639",
-  "name": "Supply of Executive Condominiums in the Pipeline by Development Status, Quarterly",
-  "rows": 72,
-  "cols": 3,
-  "start": "2014-04-01",
-  "end": "2018-09-30",
-  "updated": "2024-06-06"
- },
  "ec_sale_position": {
   "id": "d_8b71bc3e1386261039d7ad95efdc3328",
   "name": "Sale Position of Executive Condominiums with Pre-Requisites for Sale, Quarterly",
@@ -206,13 +170,13 @@
   "end": "2026-06-30",
   "updated": "2026-07-27"
  },
- "housing_loans": {
-  "id": "d_2d2ca1bcac71713d2c02deca871ebe98",
-  "name": "Outstanding Housing Loans for Owner-Occupied Property, Quarterly",
-  "rows": 19,
-  "cols": 4,
-  "start": "2011-01-01",
-  "end": "2015-09-30",
-  "updated": "2024-06-06"
+ "hdb_rpi": {
+  "id": "d_14f63e595975691e7c24a27ae4c07c79",
+  "name": "HDB Resale Price Index (1Q2009 = 100), Quarterly",
+  "rows": 146,
+  "cols": 2,
+  "start": "1990-01-01",
+  "end": "2026-06-30",
+  "updated": "2026-07-24"
  }
 }
