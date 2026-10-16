@@ -128,6 +128,8 @@ legend = "".join(f'<div>{pill(t, k)}</div><div>{d}</div>' for t, k, d in (
     ("MIXED SIGNALS", "warn", "Active conditions point in opposite directions.")))
 asof = f'Latest bidding exercise: round {cards["A"]["rnd"]} of {cards["A"]["month"]} &middot; monthly series to {Q["A"].index[-1].strftime("%b %Y")} &middot; built {now.strftime("%d %b %Y %H:%M")} SGT'
 quota_cut_12 = WF.loc["ALL admitted", "lift"]
+_sub = pd.read_csv(os.path.join(ROOT, "research", "coe_robustness_subperiods.csv")); _g = lambda p_: _sub[(_sub.period == p_) & (_sub.tf == 6)].iloc[0]
+POST2022 = (f"The effect is strong through 2021 (six-month lift {_g('2010-2016').lift:.1f} in 2010 to 2016 and {_g('2017-2021').lift:.1f} in 2017 to 2021) and not detected from 2022 (lift {_g('2022-2026').lift:.1f} on {int(_g('2022-2026').entries)} entries): the quota formula changed in 2022 and 2023, and quota cuts have been rare since.")
 # ---- ledger state and track record --------------------------------------------------------------------------------------------------------------
 import track_section
 os.makedirs(os.path.join(ROOT, "data", "ledger"), exist_ok=True)
@@ -138,7 +140,7 @@ TRACK = track_section.build()
 html = open(os.path.join(ROOT, "pipelines", "template.html"), encoding="utf-8").read()
 rep = {"{{ASOF}}": asof, "{{HEADLINE}}": headline, "{{BADGES}}": badges, "{{LEGEND}}": legend, "{{CARD_A}}": card("A"), "{{CARD_B}}": card("B"), "{{STATE_A}}": state_table("A"), "{{STATE_B}}": state_table("B"), "{{BASE}}": base_table(),
        "{{LONG}}": json.dumps(long_traces), "{{RECENT}}": json.dumps(recent), "{{CYCLE}}": json.dumps(cycle_traces),
-       "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}",
+       "{{SCHED_NOW}}": f"{sched12_now:,.0f}", "{{SCHED_1Y}}": f"{sched12_1y:,.0f}", "{{DEREG_NOW}}": f"{dr12_now:,.0f}", "{{OVERALL_LIFT}}": f"{quota_cut_12:.2f}", "{{POST2022}}": POST2022,
        "{{ENTRIES}}": f'{int(WF.loc["ALL admitted", "entries"]):,}'}
 for k_, v_ in PROP.items(): rep["{{" + k_ + "}}"] = str(v_)
 for k_, v_ in TRACK.items(): rep["{{" + k_ + "}}"] = str(v_)

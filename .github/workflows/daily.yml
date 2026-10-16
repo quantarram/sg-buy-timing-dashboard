@@ -34,6 +34,7 @@ jobs:
       - name: Walk-forwards and page
         run: |
           python research/coe_cpe_walkforward.py
+          python research/coe_robustness.py
           python research/property_cpe_walkforward.py
           python research/hdb_rpi_cpe_walkforward.py
           python pipelines/build_site.py
