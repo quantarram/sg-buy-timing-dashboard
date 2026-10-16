@@ -2,7 +2,7 @@
 import json, os, sys
 import numpy as np, pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, ROOT)
-from sgtiming import property_predictors as pr, property_state as ps, property_panel as pp
+from sgtiming import property_predictors as pr, property_state as ps, property_panel as pp, ura_panel
 
 EXCLUDED = {"fair"}
 LABEL = {"momentum": "Price momentum", "rentgrowth": "Rent growth", "rates": "2-year government yield change", "pipeline": "Supply pipeline change", "volume": "Units transacted change", "unsold": "Unsold approved units change",
@@ -78,6 +78,21 @@ def build(sup):
     p2 = [tr(ptr_idx, P.loc[ptr_idx, "nonlanded"], "Non-landed price index", C["nonlanded"]), tr(ptr_idx, R["all_wi"].reindex(ptr_idx), "Rental index (whole island)", "#7FB5E0")]
     tx = T["wi"][["new_sale", "resale", "sub_sale"]]; tx = tx[tx.index >= pd.Period("2004Q1")]
     p3 = [dict(x=[str(i.to_timestamp())[:10] for i in tx.index], y=[float(v) for v in tx[c]], name=nm, type="bar", marker=dict(color=col)) for c, nm, col in (("new_sale", "New sale", "#C9A84C"), ("resale", "Resale", "#7FB5E0"), ("sub_sale", "Sub sale", "#7A8F7A"))]
+
+    # ---- EC and condo prices from URA transactions (needs data/ura/monthly_by_type.csv)
+    if ura_panel.available():
+        import datetime as dt
+        U = ura_panel.load(); lm = ura_panel.latest_full_month(U, dt.date.today()); ly = lm - pd.DateOffset(years=1)
+        rows_ = ['<table><thead><tr><th>Median, single-unit sales</th><th>Month</th><th>Units</th><th>Price</th><th>Per sq ft</th><th>Per sq ft, year on year</th></tr></thead><tbody>']
+        for nm, s_ in U.items():
+            if lm in s_.index and ly in s_.index:
+                yo = s_.loc[lm, "psf"] / s_.loc[ly, "psf"] - 1; rows_.append(f'<tr><td>{nm}</td><td>{lm.strftime("%b %Y")}</td><td class="num">{s_.loc[lm, "units"]:,.0f}</td><td class="num">S${s_.loc[lm, "price"]:,.0f}</td><td class="num">S${s_.loc[lm, "psf"]:,.0f}</td><td class="num">{yo*100:+.1f}%</td></tr>')
+        rows_.append("</tbody></table>"); out["PROP_EC_PRICES"] = "".join(rows_)
+        cols = {"EC new sale": "#C9A84C", "EC resale": "#E8A020", "Condo new sale": "#7FB5E0", "Condo resale": "#4DB87A"}
+        pe = [tr(U[nm].index, U[nm]["psf"], nm, cols[nm], 1.8, "dot" if "new" in nm else None) for nm in U]
+        out["PROP_C4"] = json.dumps(pe)
+    else:
+        out["PROP_EC_PRICES"] = "<p class='tag'>EC prices need the URA access key (not configured in this build).</p>"; out["PROP_C4"] = "[]"
     allr = sup.loc["ALL"]; fade = [LABEL[f].split(" (")[0].lower() for f in sup.index if f not in ("ALL", "momentum") and sup.loc[f, "entries_pre2017"] >= 100 and sup.loc[f, "lift_pre2017"] >= 1.4 and sup.loc[f, "lift_2017"] < 1.0]
     mom = sup.loc["momentum"]
     out["PROP_EVIDENCE"] = (f'<div class="block"><ul><li><b>Nothing beats the base rate in the latest decade.</b> Across {int(allr["cond_years"]):,} admitted condition-years the out-of-sample lift is {allr["lift_all"]:.2f} overall and {allr["lift_2017"]:.2f} since 2017 (1.0 is no better than the base rate).</li>'

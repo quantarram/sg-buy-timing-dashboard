@@ -11,7 +11,7 @@ It is a general, public research tool with nothing personalised in it, and it is
 | Phase | What | Status |
 |---|---|---|
 | 1 | Cars: COE premium, Category A and B (monthly series from 2002) | data layer and causal walk-forward done; one modest supply effect, nothing firing now |
-| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | data layer and causal walk-forward done: no timing signal survives the latest decade; EC prices need a URA key |
+| 2 | Property: executive condominiums, private condominiums (non-landed) and landed | data layer and causal walk-forward done: no timing signal survives the latest decade; EC prices from URA transactions |
 | 3 | Dashboard: one public panel for any Singapore buyer (general conditions and probabilities, nothing personalised) | not started |
 
 ## Data (public)
@@ -23,7 +23,7 @@ It is a general, public research tool with nothing personalised in it, and it is
   - rents: private residential rental index (from 1990; non-landed by region from 2004);
   - activity: units transacted (new sale, resale, sub sale; whole island from 1999 and by region from 2004), uncompleted units launched and sold by region, completed units sold;
   - supply: pipeline by status (landed and non-landed, from 1993), available and vacant stock (from 1988), unsold approved units (from 2006);
-  - executive condominiums: launches, new and resale sales, sale position, available, vacant and pipeline (from 2008 to 2010); **no EC price series is on data.gov.sg**, so EC prices need the URA Data Service API, which needs a free access key.
+  - executive condominiums: launches, new and resale sales, sale position, available, vacant and pipeline (from 2008 to 2010); **no EC price series is on data.gov.sg**, so EC and condo prices per square foot come from the URA Data Service API (free access key; five years of single-unit transactions, updated Tuesdays and Fridays; only monthly aggregates are committed).
 - **Mortgage benchmark**: compounded SORA and government yields (monthly), already in the monthly series above.
 
 ## First findings (COE)

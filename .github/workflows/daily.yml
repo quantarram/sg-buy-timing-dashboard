@@ -21,10 +21,13 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Refresh data
+        env:
+          URA_ACCESS_KEY: ${{ secrets.URA_ACCESS_KEY }}
         run: |
           python pipelines/fetch_coe.py
           python pipelines/fetch_monthly.py
           python pipelines/fetch_property.py
+          python pipelines/fetch_ura.py
       - name: Walk-forward and page
         run: |
           python research/coe_cpe_walkforward.py

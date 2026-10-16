@@ -83,7 +83,7 @@ a{color:var(--gold)}
 </ul></div>
 
 <h2>Property (private residential)</h2>
-<p class="tag">URA price and rental indices (2009 Q1 = 100), quarterly to {{PROP_Q}}. Condo means private non-landed. Executive condominium prices are not on the public data portal, so the EC panel below covers activity and supply only.</p>
+<p class="tag">URA price and rental indices (2009 Q1 = 100), quarterly to {{PROP_Q}}. Condo means private non-landed. Executive condominium prices come from URA transaction records for the last five years; the long price history is for the private index.</p>
 <div class="grid">{{PROP_CARDS}}</div>
 <div class="block"><h3>Price indices since 1975 (regions since 2004)</h3><div id="pp1" class="chart"></div></div>
 <div class="block" style="margin-top:14px"><h3>Condo prices against rents, since 1990</h3><div id="pp2" class="chart"></div></div>
@@ -99,7 +99,12 @@ a{color:var(--gold)}
 <div class="block tablewrap" style="margin-top:14px"><h3>Falls of more than 10% from a peak</h3>{{PROP_DD}}</div>
 
 <h2>Supply, activity and executive condominiums</h2>
-<div class="grid"><section class="block"><h3>Private market</h3>{{PROP_SUPPLY}}</section><section class="block"><h3>Executive condominiums (activity and supply only)</h3>{{PROP_EC}}</section></div>
+<div class="grid"><section class="block"><h3>Private market</h3>{{PROP_SUPPLY}}</section><section class="block"><h3>Executive condominiums: activity and supply</h3>{{PROP_EC}}</section></div>
+
+<h2>Executive condominium and condo prices (URA transactions, last five years)</h2>
+<p class="tag">Median price per square foot of single-unit private sales, by month. These are medians of what happened to transact, so they move with the mix of projects; new-sale medians are lumpy because they depend on which projects launch. Not a quality-adjusted index.</p>
+<div class="block"><div id="pp4" class="chart"></div></div>
+<div class="block tablewrap" style="margin-top:14px">{{PROP_EC_PRICES}}</div>
 
 <h2>What the property evidence supports</h2>
 {{PROP_EVIDENCE}}
@@ -115,6 +120,7 @@ Plotly.newPlot('recent',{{RECENT}},lay('S$ thousand'),cfg);
 Plotly.newPlot('cycle',{{CYCLE}},lay('vehicles per month'),cfg);
 Plotly.newPlot('pp1',{{PROP_C1}},lay('index (2009 Q1 = 100)'),cfg);
 Plotly.newPlot('pp2',{{PROP_C2}},lay('index (2009 Q1 = 100)'),cfg);
+Plotly.newPlot('pp4',{{PROP_C4}},lay('S$ per sq ft',{hovermode:'x unified'}),cfg);
 Plotly.newPlot('pp3',{{PROP_C3}},lay('units per quarter',{barmode:'stack'}),cfg);
 </script>
 </body></html>
