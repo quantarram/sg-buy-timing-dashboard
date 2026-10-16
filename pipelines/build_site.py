@@ -68,7 +68,8 @@ long_traces = [tr(Q[c].index, Q[c]["premium"] / 1000, CAT[c], col) for c, col in
 recent = []
 for c, col in (("A", C_A), ("B", C_B)):
     s = ex[(ex["vehicle_class"] == CAT[c]) & (ex["t"] >= ex["t"].max() - pd.Timedelta(days=3 * 365))].sort_values("t"); recent.append(tr(s["t"], s["premium"] / 1000, CAT[c], col))
-cycle_traces = [tr(dr6.index, dr6, "De-registrations A+B (6-month mean)", C_O), tr(sched6.index[sched6.index <= "2030-01-01"], sched6[sched6.index <= "2030-01-01"], "Scheduled expiries (registrations 10 years earlier)", C_G, "dot"), tr(nr.index, nr.rolling(6).mean(), "New registrations A+B (6-month mean)", "#94a3b8", None, 1)]
+_w = lambda s_: s_[(s_.index >= "2002-01-01") & (s_.index <= "2030-01-01")]
+cycle_traces = [tr(_w(dr6).index, _w(dr6), "De-registrations A+B (6-month mean)", C_O), tr(_w(sched6).index, _w(sched6), "Scheduled expiries (registrations 10 years earlier)", C_G, "dot"), tr(_w(nr.rolling(6).mean()).index, _w(nr.rolling(6).mean()), "New registrations A+B (6-month mean)", "#94a3b8", None, 1)]
 
 # ---- html -------------------------------------------------------------------------------------------------------------------------------------------
 def pill(txt, kind): return f'<span class="pill {kind}">{txt}</span>'
