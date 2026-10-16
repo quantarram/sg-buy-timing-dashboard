@@ -25,7 +25,8 @@ It is a general, public research tool with nothing personalised in it, and it is
 Monthly series from 2002 (296 months), old Category A and B, eight registered predictor families, a causal walk-forward from 2010 (details and caveats in `research/RESULTS.md`).
 
 - Latest (September 2026, monthly mean of the two rounds): Category A S$132,450, the highest on record; Category B S$134,000.
-- Overall the walk-forward lift is modest (1.21). Supply-side conditions did best: after a quota cut the premium was in its top 20% of six-month moves 34% of the time against a 17% base. Interest rates, de-registrations and momentum added nothing, and the effect is uneven from year to year.
+- Overall the walk-forward lift is modest (1.31). Supply-side conditions did best: after a quota cut the premium was in its top 20% of twelve-month moves 50% of the time against a 22% base. Interest rates and de-registrations added nothing, and the effect is uneven from year to year.
+- There is a decade-long cycle (premium troughs in 2009 and 2019, peaks around 2013): it follows the ten-year COE life, which drives de-registrations and so quota, with the premium lagging the supply cycle by 18 to 24 months. Scheduled expiries point to rising quota through 2027 to 2028. Only two cycles, so turning points are not validated as forecasts.
 - No admitted condition is firing now. The dashboard will show base rates, the quota calendar and the state of each predictor, and say so when nothing is active.
 - Base rates over the last ten years: after three months the Category A premium was higher 63% of the time and rose more than 5% in 45% of windows; after six months the median change was +6.5%. These carry a decade of rising premiums.
 

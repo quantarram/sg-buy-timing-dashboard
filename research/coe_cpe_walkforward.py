@@ -10,6 +10,7 @@ Predictors X (mechanism registered before any result; sign +1 = high X means pre
   fair     : log premium minus a quota-implied level (log premium on log 12-month quota, refit each year on past data)  -1
   spread   : log(B/A) minus its trailing 12-month mean; +1 for A (A cheap against B), -1 for B
   momentum : change in log premium over tau_p months                                  +1  (continuation)
+  supplycycle: change over the 12 months ending L months ago (L = 6, 12, 18) in the 12-month mean of de-registrations (which set the quota; the premium lags the supply cycle by 18 to 24 months, found in coe_cycle_analysis.py)   -1  (registered after that finding, so out-of-sample only from the walk-forward years)
 tau_p in 1, 3, 6, 12 where it applies; X tails q = 20% and 10% on each side.
 Walk-forward: for each test year 2010..2026, only entries whose outcome had resolved before 1 January of that year are used to set X and Y thresholds
 (all earlier data) and to admit conditions (lift >= 1.5, >= 20 entries, >= 4 episodes of entries more than tau_f months apart; base rate matched on calendar month).
@@ -22,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); sys.path.ins
 from sgtiming import panel
 
 Q = panel.quota_panel(); F = panel.flows(); R = panel.rates(); idx = Q['A'].index
-TP = [1, 3, 6, 12]; TF = [1, 3, 6]; QS = [0.20, 0.10]; YEARS = list(range(2010, 2027)); LAGD = 2
+TP = [1, 3, 6, 12]; TF = [1, 3, 6, 12]; QS = [0.20, 0.10]; YEARS = list(range(2010, 2027)); LAGD = 2
 
 
 def build_X(cat):
@@ -30,13 +31,15 @@ def build_X(cat):
     lp = np.log(d['premium']); lq = np.log(d['quota']); ratio = d['bids'] / d['quota']
     dereg = F['dereg_' + cat].reindex(idx).shift(LAGD); gov = R['gov2y'].reindex(idx).shift(1)
     spread = (np.log(Q['B']['premium']) - np.log(Q['A']['premium'])); sp_dev = spread - spread.rolling(12, min_periods=9).mean()
-    X = {}; SIGN = {'quota': -1, 'dereg': -1, 'bids': +1, 'rates': -1, 'value': -1, 'fair': -1, 'spread': (+1 if cat == 'A' else -1), 'momentum': +1}
+    X = {}; SIGN = {'quota': -1, 'dereg': -1, 'bids': +1, 'rates': -1, 'value': -1, 'fair': -1, 'supplycycle': -1, 'spread': (+1 if cat == 'A' else -1), 'momentum': +1}
     for tp in TP:
         X[('quota', tp)] = lq - lq.shift(tp)
         X[('dereg', tp)] = np.log(dereg.rolling(tp, min_periods=max(1, tp // 2)).mean()) - np.log(dereg.rolling(12, min_periods=9).mean())
         X[('bids', tp)] = ratio.rolling(tp, min_periods=max(1, tp // 2)).mean()
         X[('rates', tp)] = gov - gov.shift(tp)
         X[('momentum', tp)] = lp - lp.shift(tp)
+    sc = np.log(dereg.rolling(12, min_periods=9).mean())
+    for L in (6, 12, 18): X[('supplycycle', L)] = sc.shift(L) - sc.shift(L + 12)
     X[('value', 0)] = lp - lp.rolling(12, min_periods=9).mean(); X[('spread', 0)] = sp_dev
     return lp, lq, X, SIGN
 
