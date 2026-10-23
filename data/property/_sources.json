@@ -53,15 +53,6 @@
   "end": "2026-06-30",
   "updated": "2026-07-24"
  },
- "txn_all": {
-  "id": "d_7c69c943d5f0d89d6a9a773d2b51f337",
-  "name": "Private Residential Property Transactions in the Whole of Singapore, Quarterly",
-  "rows": 428,
-  "cols": 4,
-  "start": "1999-10-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
- },
  "txn_ccr": {
   "id": "d_c287c8be114bfa7d055b27ab2c87de83",
   "name": "Private Residential Property Transactions in Core Central Region, Quarterly",
