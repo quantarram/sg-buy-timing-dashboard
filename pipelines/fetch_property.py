@@ -32,14 +32,29 @@ SETS = {
     # credit
 }
 OUT = os.path.join(ROOT, "data", "property"); os.makedirs(OUT, exist_ok=True)
+import pandas as pd
+_src = os.path.join(OUT, "_sources.json")
+prev = json.load(open(_src)) if os.path.exists(_src) else {}
 info = {}
 for k, i in SETS.items():
     try:
         df, meta = datagov.fetch(i)
-        df.to_csv(os.path.join(OUT, k + ".csv"), index=False)
+        path = os.path.join(OUT, k + ".csv")
+        if os.path.exists(path):
+            # Schema guard (added 2026-10-24): on 2026-10-23 data.gov.sg served the "unsold units with planning approvals" table
+            # under the "units launched" dataset id (972 rows x 6 columns instead of 270 x 3), which broke the page build. If the
+            # columns differ from the file we already hold, keep the file and the previous source record and say so loudly.
+            old_cols = list(pd.read_csv(path, nrows=0).columns)
+            if old_cols != list(df.columns):
+                print(f"{k:26s} SCHEMA CHANGED upstream ({old_cols} -> {list(df.columns)}); kept the previous file")
+                prev[k]["schema_warning"] = f"{time.strftime('%Y-%m-%d')}: upstream columns changed to {list(df.columns)}; previous file kept"
+                info[k] = prev[k]
+                continue
+        df.to_csv(path, index=False)
         info[k] = dict(id=i, name=meta.get("name"), rows=len(df), cols=len(df.columns), start=str(meta.get("coverageStart"))[:10], end=str(meta.get("coverageEnd"))[:10], updated=str(meta.get("lastUpdatedAt"))[:10])
         print(f"{k:26s} {df.shape} {info[k]['start']} -> {info[k]['end']} (updated {info[k]['updated']})  {meta.get('name')}")
     except Exception as e:
         print(f"{k:26s} FAILED {repr(e)[:100]}")
+        if k in prev: info[k] = prev[k]
     time.sleep(3)
 json.dump(info, open(os.path.join(OUT, "_sources.json"), "w"), indent=1)

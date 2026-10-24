@@ -959,3 +959,15 @@ quarter,market_segment,completion_status,launch_status,pre_requisites_status,uni
 2026-Q2,Rest of Central Region,Uncompleted,Launched,With Pre-Requisites,1512
 2026-Q2,Rest of Central Region,Uncompleted,na,Without Pre-Requisites,2341
 2026-Q2,Rest of Central Region,Uncompleted,Not Launch Yet,With Pre-Requisites,527
+2026-Q3,Core Central Region,Completed,na,na,72
+2026-Q3,Core Central Region,Uncompleted,Launched,With Pre-Requisites,859
+2026-Q3,Core Central Region,Uncompleted,na,Without Pre-Requisites,3208
+2026-Q3,Core Central Region,Uncompleted,Not Launch Yet,With Pre-Requisites,1145
+2026-Q3,Outside Central Region,Completed,na,na,62
+2026-Q3,Outside Central Region,Uncompleted,Launched,With Pre-Requisites,1233
+2026-Q3,Outside Central Region,Uncompleted,na,Without Pre-Requisites,4456
+2026-Q3,Outside Central Region,Uncompleted,Not Launch Yet,With Pre-Requisites,1142
+2026-Q3,Rest of Central Region,Completed,na,na,89
+2026-Q3,Rest of Central Region,Uncompleted,Launched,With Pre-Requisites,1324
+2026-Q3,Rest of Central Region,Uncompleted,na,Without Pre-Requisites,3922
+2026-Q3,Rest of Central Region,Uncompleted,Not Launch Yet,With Pre-Requisites,1564
