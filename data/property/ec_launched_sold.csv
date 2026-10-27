@@ -343,3 +343,7 @@ quarter,ec_launched_status,type_of_sale,units
 2026-Q2,EC Launched,na,0
 2026-Q2,EC Less than 10 years from TOP,Resale,0
 2026-Q2,Uncompleted EC,New sale,169
+2026-Q3,EC 10 years or more from TOP,Resale,0
+2026-Q3,EC Launched,na,0
+2026-Q3,EC Less than 10 years from TOP,Resale,0
+2026-Q3,Uncompleted EC,New sale,66

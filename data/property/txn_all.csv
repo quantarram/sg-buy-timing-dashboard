@@ -427,3 +427,7 @@ quarter,type_of_sale,sale_status,units
 2026-Q2,New Sale,Uncompleted,2125
 2026-Q2,Resale,na,3813
 2026-Q2,Sub Sale,na,194
+2026-Q3,New Sale,Completed,72
+2026-Q3,New Sale,Uncompleted,1111
+2026-Q3,Resale,na,3801
+2026-Q3,Sub Sale,na,162

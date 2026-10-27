@@ -641,3 +641,8 @@ quarter,ec_completion_status,sale_status,units
 2026-Q2,Uncompleted EC with pre-requisites for sale,Launched and Sold,3035
 2026-Q2,Uncompleted EC with pre-requisites for sale,na,3184
 2026-Q2,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0
+2026-Q3,Uncompleted EC with pre-requisites for sale,Lanched but Unsold,145
+2026-Q3,Uncompleted EC with pre-requisites for sale,Launched,3184
+2026-Q3,Uncompleted EC with pre-requisites for sale,Launched and Sold,3039
+2026-Q3,Uncompleted EC with pre-requisites for sale,na,3184
+2026-Q3,Uncompleted EC with pre-requisites for sale,Not Lauched Yet,0

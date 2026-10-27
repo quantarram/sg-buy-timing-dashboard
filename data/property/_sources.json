@@ -56,38 +56,38 @@
  "txn_all": {
   "id": "d_7c69c943d5f0d89d6a9a773d2b51f337",
   "name": "Private Residential Property Transactions in the Whole of Singapore, Quarterly",
-  "rows": 428,
+  "rows": 432,
   "cols": 4,
   "start": "1999-10-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "txn_ccr": {
   "id": "d_c287c8be114bfa7d055b27ab2c87de83",
   "name": "Private Residential Property Transactions in Core Central Region, Quarterly",
-  "rows": 360,
+  "rows": 364,
   "cols": 4,
   "start": "2004-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "txn_rcr": {
   "id": "d_5785799d63a9da091f4e0b456291eeb8",
   "name": "Private Residential Property Transactions in Rest of Central Region, Quarterly",
-  "rows": 360,
+  "rows": 364,
   "cols": 4,
   "start": "2004-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "txn_ocr": {
   "id": "d_1a7823f3d31e7db4b426833833762bab",
   "name": "Private Residential Property Transactions in Outside Central Region, Quarterly",
-  "rows": 360,
+  "rows": 364,
   "cols": 4,
   "start": "2004-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "launched_uncompleted": {
   "id": "d_70824d34defde87d88faccc5d5b1c6ea",
@@ -97,34 +97,34 @@
   "start": "2004-01-01",
   "end": "2026-06-30",
   "updated": "2026-07-27",
-  "schema_warning": "2026-10-26: upstream columns changed to ['quarter', 'market_segment', 'completion_status', 'launch_status', 'pre_requisites_status', 'units']; previous file kept"
+  "schema_warning": "2026-10-27: upstream columns changed to ['quarter', 'market_segment', 'completion_status', 'launch_status', 'pre_requisites_status', 'units']; previous file kept"
  },
  "sold_uncompleted": {
   "id": "d_e1c5b0df62729e69c82716355ef295ba",
   "name": "Uncompleted Private Residential Units Sold in the Quarter by Market Segment, Quarterly",
-  "rows": 270,
+  "rows": 273,
   "cols": 4,
   "start": "2004-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "sold_completed": {
   "id": "d_a283de8cb3b4e80a228bf5f5e0bc4449",
   "name": "Completed Private Residential Units Sold in the Quarter, Quarterly",
-  "rows": 107,
+  "rows": 108,
   "cols": 3,
   "start": "1999-10-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "ec_launched_sold": {
   "id": "d_19c79027c2e6be3c39d637151bd2188d",
   "name": "Executive Condominium Units Launched and Sold in the Quarter, Quarterly",
-  "rows": 344,
+  "rows": 348,
   "cols": 4,
   "start": "2008-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "supply_pipeline_b": {
   "id": "d_055b6549444dedb341c50805d9682a41",
@@ -165,11 +165,11 @@
  "ec_sale_position": {
   "id": "d_8b71bc3e1386261039d7ad95efdc3328",
   "name": "Sale Position of Executive Condominiums with Pre-Requisites for Sale, Quarterly",
-  "rows": 642,
+  "rows": 647,
   "cols": 4,
   "start": "1999-10-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27"
+  "end": "2026-09-30",
+  "updated": "2026-10-26"
  },
  "hdb_rpi": {
   "id": "d_14f63e595975691e7c24a27ae4c07c79",
