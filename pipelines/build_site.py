@@ -9,7 +9,7 @@ from sgtiming.predictors import build_X, fair_resid
 
 Q = panel.quota_panel(); F = panel.flows(); R = panel.rates(); idx = Q["A"].index
 ex = pd.read_csv(os.path.join(ROOT, "data", "coe_results.csv"))
-for c in ["quota", "bids_success", "bids_received", "premium"]: ex[c] = pd.to_numeric(ex[c], errors="coerce")
+for c in ["quota", "bids_success", "bids_received", "premium"]: ex[c] = pd.to_numeric(ex[c].astype(str).str.replace(",", "", regex=False), errors="coerce")
 ex["t"] = pd.to_datetime(ex["month"] + "-01") + pd.to_timedelta((ex["bidding_no"] - 1) * 14, unit="D")
 WF = pd.read_csv(os.path.join(ROOT, "research", "coe_walkforward_summary.csv")).set_index("group")
 SUP = pd.read_csv(os.path.join(ROOT, "research", "coe_family_support.csv")).set_index("family")

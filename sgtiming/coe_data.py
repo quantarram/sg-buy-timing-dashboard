@@ -26,6 +26,6 @@ def parse(raw):
     """One row per exercise and category; exercise time approximated as the 1st (round 1) or 15th (round 2) of the month."""
     d = pd.read_csv(io.BytesIO(raw))
     for c in ["quota", "bids_success", "bids_received", "premium"]:
-        d[c] = pd.to_numeric(d[c], errors="coerce")
+        d[c] = pd.to_numeric(d[c].astype(str).str.replace(",", "", regex=False), errors="coerce")   # the source writes some counts as "1,007"
     d["t"] = pd.to_datetime(d["month"] + "-01") + pd.to_timedelta((d["bidding_no"] - 1) * 14, unit="D")
     return d.sort_values(["vehicle_class", "t"]).reset_index(drop=True)
