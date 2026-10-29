@@ -97,7 +97,7 @@
   "start": "2004-01-01",
   "end": "2026-06-30",
   "updated": "2026-07-27",
-  "schema_warning": "2026-10-28: upstream columns changed to ['quarter', 'market_segment', 'completion_status', 'launch_status', 'pre_requisites_status', 'units']; previous file kept"
+  "schema_warning": "2026-10-29: upstream columns changed to ['quarter', 'market_segment', 'completion_status', 'launch_status', 'pre_requisites_status', 'units']; previous file kept"
  },
  "sold_uncompleted": {
   "id": "d_e1c5b0df62729e69c82716355ef295ba",
