@@ -92,12 +92,11 @@
  "launched_uncompleted": {
   "id": "d_70824d34defde87d88faccc5d5b1c6ea",
   "name": "Uncompleted Private Residential Units Launched in the Quarter by Market Segment, Quarterly",
-  "rows": 270,
+  "rows": 273,
   "cols": 3,
   "start": "2004-01-01",
-  "end": "2026-06-30",
-  "updated": "2026-07-27",
-  "schema_warning": "2026-11-02: upstream columns changed to ['quarter', 'market_segment', 'completion_status', 'launch_status', 'pre_requisites_status', 'units']; previous file kept"
+  "end": "2026-09-30",
+  "updated": "2026-11-03"
  },
  "sold_uncompleted": {
   "id": "d_e1c5b0df62729e69c82716355ef295ba",
