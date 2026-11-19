@@ -1994,3 +1994,8 @@ month,bidding_no,vehicle_class,quota,bids_success,bids_received,premium
 2026-11,1,Category C,315,310,451,92000
 2026-11,1,Category D,509,500,584,10689
 2026-11,1,Category E,287,282,506,135998
+2026-11,2,Category A,1193,1130,1464,130100
+2026-11,2,Category B,951,951,1066,125600
+2026-11,2,Category C,314,314,504,91790
+2026-11,2,Category D,506,499,635,10489
+2026-11,2,Category E,266,225,466,136000
